@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamProject.Entities
+namespace WpfApplication4.Entities
 {
-    class Table
+    public class Table
     {
         [Key, Column(Order = 0)]
         public int TableID { get; set; }

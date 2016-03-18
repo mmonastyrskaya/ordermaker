@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamProject.Entities
+namespace WpfApplication4.Entities
 {
-    class BludoInOrder
+    public class BludoInOrder
     {
         [Key, Column(Order = 0)]
         public int BludoID { get; set; }

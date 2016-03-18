@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace TeamProject
+namespace WpfApplication4
 {
     class Context : DbContext
     {
