@@ -1,8 +1,35 @@
 ﻿<Window x:Class="WpfApplication4.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="300">
     <Grid>
-        
-    </Grid>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="0" Background="#FF01579B"></Grid>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#0288d1"></Grid>
+        <Grid Grid.Column="1" Grid.Row="2" Background="#29b6f6"></Grid>
+        <Grid Grid.Column="1" Grid.Row="3" Background="#81d4fa"></Grid>
+        <Grid Grid.Column="1" Grid.Row="4" Background="#29b6f6"></Grid>
+        <Grid Grid.Column="1" Grid.Row="5" Background="#FF01579B"></Grid>
+
+
+            <Label Content="Добро пожаловать в наш ресторан!" Foreground="White"  FontFamily="./Roboto" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            <Label Content="Кто Вы?" Grid.Column="0" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Button Content="Посетитель" Grid.Column="0" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,51.5,0,0" Background="{x:Null}"   />
+            <Button Content="Официант" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,63" Background="{x:Null}"/>
+            <Button Content="Администратор" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,101.5,0,38" Background="{x:Null}"/>
+            
+
+
+        </Grid>
 </Window>
