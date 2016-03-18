@@ -15,26 +15,14 @@ namespace WpfApplication4.Migrations
 
         protected override void Seed(WpfApplication4.Context context)
         {
-            //List<Entities.Table> listTables = new List<Entities.Table>();
-            //using (referat1DataSet referats = new referat1DataSet())
-            //{
+            OrderService s = new OrderService();
 
-            //    var tables = from r in referats.dbo_Table
-            //                 select r;
-            //    foreach (referat1DataSet.dbo_TableRow singleTable in tables)
-            //    {
-            //        Entities.Table t = new Entities.Table();
-            //        t.TableID = singleTable.id_Table;
-            //        //t.label_Table = singleTable.label_Table;
-            //        //t.location_Table = singleTable.location_Table;
-            //        //t.places_Table = singleTable.places_Table;
-
-            //        listTables.Add(t);
-            //    }
-            //}
-
-            //OrderService s = new OrderService();
-            //List<Entities.Table> tables = s.GetAllTables();
+            List<Entities.Bludo> bludos = s.GetAllBludos();
+            List<Entities.BludoInOrder> bludosio = s.GetAllBludosInOrder();
+            List<Entities.OrderInTime> orders = s.GetAllOrdersInTime();
+            List<Entities.Table> tables = s.GetAllTables();
+            List<Entities.Waiter> waiters = s.GetAllWaiters();
+            
 
             //using (var sr = new StreamReader(@"D:\Suppliers\Suppliers\source.csv"))
             //{
@@ -47,19 +35,37 @@ namespace WpfApplication4.Migrations
             //        var dName = items[0];
             //        var sName = items[2];
 
-            foreach (Entities.Table table in tables)
-            {
-                context.Tables.AddOrUpdate(t => t.TableID,
-                new Entities.Table
-                {
-                    TableID = table.TableID,
-                    TableLabel = table.TableLabel,
-                    TableLocation = table.TableLocation,
-                    TablePlaces = table.TablePlaces
-                });
-                context.SaveChanges();
-            }
-            
+            //foreach (Entities.Waiter waiter in waiters)
+            //{
+                //context.Waiters.AddOrUpdate(b => b.WaiterID,
+                //new Entities.Waiter
+                //{
+                //    WaiterID = 2,
+                //    WaiterName = "",
+                //    WaiterSurname = "",
+                //    WaiterLogin = "",
+                //    WaiterPassword = ""
+                //});
+                //context.SaveChanges();
+            //}
+
+            //context.Bludos.AddOrUpdate(b => b.BludoID,
+            //    new Entities.Bludo
+            //    {
+            //        //BludoID = bludos[0].BludoID,
+            //        //BludoName = bludos[0].BludoName,
+            //        //BludoCategory = bludos[0].BludoCategory,
+            //        //BludoPrice = bludos[0].BludoPrice,
+            //        ////BludoTime = bludo.BludoTime,
+            //        //BludoWeight = bludos[0].BludoWeight 
+            //        BludoID = 1,
+            //        BludoName = "Test",
+            //        BludoCategory = "Test",
+            //        BludoPrice = 10.0m,
+            //        //BludoTime = bludo.BludoTime,
+            //        BludoWeight = 100
+            //    });
+            //context.SaveChanges();
 
             //        context.Suppliers.AddOrUpdate(s => s.Name,
             //            new Supplier
