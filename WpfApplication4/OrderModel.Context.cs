@@ -13,10 +13,10 @@ namespace WpfApplication4
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TeamProjectEntities5 : DbContext
+    public partial class TeamProjectEntities6 : DbContext
     {
-        public TeamProjectEntities5()
-            : base("name=TeamProjectEntities5")
+        public TeamProjectEntities6()
+            : base("name=TeamProjectEntities6")
         {
         }
     
@@ -25,6 +25,10 @@ namespace WpfApplication4
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public DbSet<Bludo> Bludo { get; set; }
+        public DbSet<BludoInOrder> BludoInOrder { get; set; }
+        public DbSet<OrderInTime> OrderInTime { get; set; }
+        public DbSet<Table> Table { get; set; }
+        public DbSet<Waiter> Waiter { get; set; }
     }
 }

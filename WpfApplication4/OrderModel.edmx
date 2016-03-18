@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TeamProjectModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TeamProjectModel1StoreContainer">
+          <EntitySet Name="Bludo" EntityType="TeamProjectModel1.Store.Bludo" store:Type="Tables" store:Schema="dbo" store:Name="Bludo">
+            <DefiningQuery>SELECT 
+      [Bludo].[id_Bludo] AS [id_Bludo], 
+      [Bludo].[name_Bludo] AS [name_Bludo], 
+      [Bludo].[weight_Bludo] AS [weight_Bludo], 
+      [Bludo].[price_Bludo] AS [price_Bludo], 
+      [Bludo].[category_Bludo] AS [category_Bludo], 
+      [Bludo].[time_Bludo] AS [time_Bludo], 
+      [Bludo].[id] AS [id]
+      FROM [dbo].[Bludo] AS [Bludo]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BludoInOrder" EntityType="TeamProjectModel1.Store.BludoInOrder" store:Type="Tables" store:Schema="dbo" store:Name="BludoInOrder">
+            <DefiningQuery>SELECT 
+      [BludoInOrder].[id_Bludo] AS [id_Bludo], 
+      [BludoInOrder].[number_Bludo] AS [number_Bludo], 
+      [BludoInOrder].[ordertime] AS [ordertime], 
+      [BludoInOrder].[id_Order] AS [id_Order], 
+      [BludoInOrder].[status] AS [status], 
+      [BludoInOrder].[id] AS [id]
+      FROM [dbo].[BludoInOrder] AS [BludoInOrder]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OrderInTime" EntityType="TeamProjectModel1.Store.OrderInTime" store:Type="Tables" store:Schema="dbo" store:Name="OrderInTime">
+            <DefiningQuery>SELECT 
+      [OrderInTime].[id_Table] AS [id_Table], 
+      [OrderInTime].[id_Waiter] AS [id_Waiter], 
+      [OrderInTime].[id_Order] AS [id_Order], 
+      [OrderInTime].[id] AS [id]
+      FROM [dbo].[OrderInTime] AS [OrderInTime]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Table" EntityType="TeamProjectModel1.Store.Table" store:Type="Tables" store:Schema="dbo" store:Name="Table">
+            <DefiningQuery>SELECT 
+      [Table].[id_Table] AS [id_Table], 
+      [Table].[location_Table] AS [location_Table], 
+      [Table].[label_Table] AS [label_Table], 
+      [Table].[places_Table] AS [places_Table], 
+      [Table].[id] AS [id]
+      FROM [dbo].[Table] AS [Table]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Waiter" EntityType="TeamProjectModel1.Store.Waiter" store:Type="Tables" store:Schema="dbo" store:Name="Waiter">
+            <DefiningQuery>SELECT 
+      [Waiter].[id_Waiter] AS [id_Waiter], 
+      [Waiter].[name_Waiter] AS [name_Waiter], 
+      [Waiter].[surname_Waiter] AS [surname_Waiter], 
+      [Waiter].[login] AS [login], 
+      [Waiter].[password] AS [password], 
+      [Waiter].[id] AS [id]
+      FROM [dbo].[Waiter] AS [Waiter]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TeamProject.dbo.Bludo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Bludo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Bludo" Type="int" />
+          <Property Name="name_Bludo" Type="nvarchar" MaxLength="20" />
+          <Property Name="weight_Bludo" Type="int" />
+          <Property Name="price_Bludo" Type="int" />
+          <Property Name="category_Bludo" Type="nvarchar" MaxLength="20" />
+          <Property Name="time_Bludo" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TeamProject.dbo.BludoInOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="BludoInOrder">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Bludo" Type="int" />
+          <Property Name="number_Bludo" Type="int" />
+          <Property Name="ordertime" Type="datetime2" />
+          <Property Name="id_Order" Type="int" />
+          <Property Name="status" Type="nvarchar" MaxLength="18" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TeamProject.dbo.OrderInTime' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="OrderInTime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Table" Type="int" />
+          <Property Name="id_Waiter" Type="int" />
+          <Property Name="id_Order" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TeamProject.dbo.Table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Table" Type="int" />
+          <Property Name="location_Table" Type="nvarchar" MaxLength="20" />
+          <Property Name="label_Table" Type="nvarchar" MaxLength="20" />
+          <Property Name="places_Table" Type="int" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'TeamProject.dbo.Waiter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Waiter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Waiter" Type="int" />
+          <Property Name="name_Waiter" Type="nvarchar" MaxLength="20" />
+          <Property Name="surname_Waiter" Type="nvarchar" MaxLength="20" />
+          <Property Name="login" Type="nvarchar" MaxLength="20" />
+          <Property Name="password" Type="nvarchar" MaxLength="20" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TeamProjectModel1" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TeamProjectEntities6" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Bludo" EntityType="TeamProjectModel1.Bludo" />
+          <EntitySet Name="BludoInOrder" EntityType="TeamProjectModel1.BludoInOrder" />
+          <EntitySet Name="OrderInTime" EntityType="TeamProjectModel1.OrderInTime" />
+          <EntitySet Name="Table" EntityType="TeamProjectModel1.Table" />
+          <EntitySet Name="Waiter" EntityType="TeamProjectModel1.Waiter" />
+        </EntityContainer>
+        <EntityType Name="Bludo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Bludo" Type="Int32" />
+          <Property Name="name_Bludo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="weight_Bludo" Type="Int32" />
+          <Property Name="price_Bludo" Type="Int32" />
+          <Property Name="category_Bludo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="time_Bludo" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="BludoInOrder">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Bludo" Type="Int32" />
+          <Property Name="number_Bludo" Type="Int32" />
+          <Property Name="ordertime" Type="DateTime" Precision="7" />
+          <Property Name="id_Order" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="18" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="OrderInTime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Table" Type="Int32" />
+          <Property Name="id_Waiter" Type="Int32" />
+          <Property Name="id_Order" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Table" Type="Int32" />
+          <Property Name="location_Table" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="label_Table" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="places_Table" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Waiter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_Waiter" Type="Int32" />
+          <Property Name="name_Waiter" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="surname_Waiter" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="login" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="password" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TeamProjectModel1StoreContainer" CdmEntityContainer="TeamProjectEntities6">
+          <EntitySetMapping Name="Bludo">
+            <EntityTypeMapping TypeName="TeamProjectModel1.Bludo">
+              <MappingFragment StoreEntitySet="Bludo">
+                <ScalarProperty Name="id_Bludo" ColumnName="id_Bludo" />
+                <ScalarProperty Name="name_Bludo" ColumnName="name_Bludo" />
+                <ScalarProperty Name="weight_Bludo" ColumnName="weight_Bludo" />
+                <ScalarProperty Name="price_Bludo" ColumnName="price_Bludo" />
+                <ScalarProperty Name="category_Bludo" ColumnName="category_Bludo" />
+                <ScalarProperty Name="time_Bludo" ColumnName="time_Bludo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BludoInOrder">
+            <EntityTypeMapping TypeName="TeamProjectModel1.BludoInOrder">
+              <MappingFragment StoreEntitySet="BludoInOrder">
+                <ScalarProperty Name="id_Bludo" ColumnName="id_Bludo" />
+                <ScalarProperty Name="number_Bludo" ColumnName="number_Bludo" />
+                <ScalarProperty Name="ordertime" ColumnName="ordertime" />
+                <ScalarProperty Name="id_Order" ColumnName="id_Order" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderInTime">
+            <EntityTypeMapping TypeName="TeamProjectModel1.OrderInTime">
+              <MappingFragment StoreEntitySet="OrderInTime">
+                <ScalarProperty Name="id_Table" ColumnName="id_Table" />
+                <ScalarProperty Name="id_Waiter" ColumnName="id_Waiter" />
+                <ScalarProperty Name="id_Order" ColumnName="id_Order" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table">
+            <EntityTypeMapping TypeName="TeamProjectModel1.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="id_Table" ColumnName="id_Table" />
+                <ScalarProperty Name="location_Table" ColumnName="location_Table" />
+                <ScalarProperty Name="label_Table" ColumnName="label_Table" />
+                <ScalarProperty Name="places_Table" ColumnName="places_Table" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Waiter">
+            <EntityTypeMapping TypeName="TeamProjectModel1.Waiter">
+              <MappingFragment StoreEntitySet="Waiter">
+                <ScalarProperty Name="id_Waiter" ColumnName="id_Waiter" />
+                <ScalarProperty Name="name_Waiter" ColumnName="name_Waiter" />
+                <ScalarProperty Name="surname_Waiter" ColumnName="surname_Waiter" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
