@@ -15,26 +15,15 @@ namespace WpfApplication4.Migrations
 
         protected override void Seed(WpfApplication4.Context context)
         {
-            //List<Entities.Table> listTables = new List<Entities.Table>();
-            //using (referat1DataSet referats = new referat1DataSet())
-            //{
+            OrderService s = new OrderService();
 
-            //    var tables = from r in referats.dbo_Table
-            //                 select r;
-            //    foreach (referat1DataSet.dbo_TableRow singleTable in tables)
-            //    {
-            //        Entities.Table t = new Entities.Table();
-            //        t.TableID = singleTable.id_Table;
-            //        //t.label_Table = singleTable.label_Table;
-            //        //t.location_Table = singleTable.location_Table;
-            //        //t.places_Table = singleTable.places_Table;
+            List<Entities.Bludo> bludos = s.GetAllBludos();
+            List<Entities.BludoInOrder> bludosio = s.GetAllBludosInOrder();
+            List<Entities.OrderInTime> orders = s.GetAllOrdersInTime();
+            List<Entities.Table> tables = s.GetAllTables();
+            List<Entities.Waiter> waiters = s.GetAllWaiters();
+            
 
-            //        listTables.Add(t);
-            //    }
-            //}
-
-            //OrderService s = new OrderService();
-            //List<Entities.Table> tables = s.GetAllTables();
 
             //using (var sr = new StreamReader(@"D:\Suppliers\Suppliers\source.csv"))
             //{
@@ -47,15 +36,17 @@ namespace WpfApplication4.Migrations
             //        var dName = items[0];
             //        var sName = items[2];
 
-            foreach (Entities.Table table in tables)
+            foreach (Entities.Bludo bludo in bludos)
             {
-                context.Tables.AddOrUpdate(t => t.TableID,
-                new Entities.Table
+                context.Bludos.AddOrUpdate(b => b.BludoID,
+                new Entities.Bludo
                 {
-                    TableID = table.TableID,
-                    TableLabel = table.TableLabel,
-                    TableLocation = table.TableLocation,
-                    TablePlaces = table.TablePlaces
+                    BludoID = bludo.BludoID,
+                    BludoName = bludo.BludoName,
+                    BludoCategory = bludo.BludoCategory,
+                    BludoPrice = bludo.BludoPrice,
+                    BludoTime = bludo.BludoTime,
+                    BludoWeight = bludo.BludoWeight
                 });
                 context.SaveChanges();
             }

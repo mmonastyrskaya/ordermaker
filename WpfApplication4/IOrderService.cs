@@ -12,18 +12,18 @@ namespace WpfApplication4
     public interface IOrderService
     {
         [OperationContract]
-        List<Bludo> GetAllBludos();
+        List<Entities.Bludo> GetAllBludos();
 
         [OperationContract]
-        List<BludoInOrder> GetAllBludosInOrder();
+        List<Entities.BludoInOrder> GetAllBludosInOrder();
 
         [OperationContract]
-        List<OrderInTime> GetAllOrdersInTime();
+        List<Entities.OrderInTime> GetAllOrdersInTime();
 
         [OperationContract]
-        List<Table> GetAllTables();
+        List<Entities.Table> GetAllTables();
 
         [OperationContract]
-        List<Waiter> GetAllWaiters();
+        List<Entities.Waiter> GetAllWaiters();
     }
 }

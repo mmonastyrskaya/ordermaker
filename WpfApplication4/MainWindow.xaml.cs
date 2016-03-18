@@ -23,8 +23,6 @@ namespace WpfApplication4
         public MainWindow()
         {
             InitializeComponent();
-            OrderService s = new OrderService();
-            List<Entities.Table> tables = s.GetAllTables();
         }
     }
 }
