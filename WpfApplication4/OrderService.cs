@@ -24,7 +24,7 @@ namespace WpfApplication4
                     b.BludoName = singleBludo.name_Bludo;
                     b.BludoPrice = decimal.Parse(singleBludo.price_Bludo.ToString());
                     b.BludoWeight = double.Parse(singleBludo.weight_Bludo.ToString());
-                    b.BludoTime = DateTime.Parse(singleBludo.time_Bludo.ToString());
+                    //b.BludoTime = int.Parse(singleBludo.time_Bludo.ToString());
 
                     listBludos.Add(b);
                 }

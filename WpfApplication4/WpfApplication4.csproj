@@ -92,6 +92,22 @@
     <Compile Include="Migrations\201603182217127_Migr3.Designer.cs">
       <DependentUpon>201603182217127_Migr3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603182230073_MigrProperty.cs" />
+    <Compile Include="Migrations\201603182230073_MigrProperty.Designer.cs">
+      <DependentUpon>201603182230073_MigrProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603182256375_Try.cs" />
+    <Compile Include="Migrations\201603182256375_Try.Designer.cs">
+      <DependentUpon>201603182256375_Try.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603182306539_FillingTest.cs" />
+    <Compile Include="Migrations\201603182306539_FillingTest.Designer.cs">
+      <DependentUpon>201603182306539_FillingTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603182338520_T1.cs" />
+    <Compile Include="Migrations\201603182338520_T1.Designer.cs">
+      <DependentUpon>201603182338520_T1.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,6 +186,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603182217127_Migr3.resx">
       <DependentUpon>201603182217127_Migr3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603182230073_MigrProperty.resx">
+      <DependentUpon>201603182230073_MigrProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603182256375_Try.resx">
+      <DependentUpon>201603182256375_Try.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603182306539_FillingTest.resx">
+      <DependentUpon>201603182306539_FillingTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603182338520_T1.resx">
+      <DependentUpon>201603182338520_T1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

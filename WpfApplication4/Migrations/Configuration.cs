@@ -24,7 +24,6 @@ namespace WpfApplication4.Migrations
             List<Entities.Waiter> waiters = s.GetAllWaiters();
             
 
-
             //using (var sr = new StreamReader(@"D:\Suppliers\Suppliers\source.csv"))
             //{
             //    // Skip headers
@@ -36,21 +35,37 @@ namespace WpfApplication4.Migrations
             //        var dName = items[0];
             //        var sName = items[2];
 
-            foreach (Entities.Bludo bludo in bludos)
-            {
-                context.Bludos.AddOrUpdate(b => b.BludoID,
-                new Entities.Bludo
-                {
-                    BludoID = bludo.BludoID,
-                    BludoName = bludo.BludoName,
-                    BludoCategory = bludo.BludoCategory,
-                    BludoPrice = bludo.BludoPrice,
-                    BludoTime = bludo.BludoTime,
-                    BludoWeight = bludo.BludoWeight
-                });
-                context.SaveChanges();
-            }
-            
+            //foreach (Entities.Waiter waiter in waiters)
+            //{
+                //context.Waiters.AddOrUpdate(b => b.WaiterID,
+                //new Entities.Waiter
+                //{
+                //    WaiterID = 2,
+                //    WaiterName = "",
+                //    WaiterSurname = "",
+                //    WaiterLogin = "",
+                //    WaiterPassword = ""
+                //});
+                //context.SaveChanges();
+            //}
+
+            //context.Bludos.AddOrUpdate(b => b.BludoID,
+            //    new Entities.Bludo
+            //    {
+            //        //BludoID = bludos[0].BludoID,
+            //        //BludoName = bludos[0].BludoName,
+            //        //BludoCategory = bludos[0].BludoCategory,
+            //        //BludoPrice = bludos[0].BludoPrice,
+            //        ////BludoTime = bludo.BludoTime,
+            //        //BludoWeight = bludos[0].BludoWeight 
+            //        BludoID = 1,
+            //        BludoName = "Test",
+            //        BludoCategory = "Test",
+            //        BludoPrice = 10.0m,
+            //        //BludoTime = bludo.BludoTime,
+            //        BludoWeight = 100
+            //    });
+            //context.SaveChanges();
 
             //        context.Suppliers.AddOrUpdate(s => s.Name,
             //            new Supplier
