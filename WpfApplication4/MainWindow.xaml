@@ -25,9 +25,9 @@
 
             <Label Content="Добро пожаловать в наш ресторан!" Foreground="White"  FontFamily="./Roboto" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
             <Label Content="Кто Вы?" Grid.Column="0" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Button Content="Посетитель" Grid.Column="0" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,51.5,0,0" Background="{x:Null}"   />
-            <Button Content="Официант" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,63" Background="{x:Null}"/>
-            <Button Content="Администратор" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,101.5,0,38" Background="{x:Null}"/>
+            <Button Content="Посетитель" Grid.Column="0" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,51.5,0,0" Background="{x:Null}" BorderBrush="{x:Null}"   />
+            <Button Content="Официант" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,63" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button Content="Администратор" Grid.Column="0" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,101.5,0,38" Background="{x:Null}" BorderBrush="{x:Null}"/>
             
 
 
