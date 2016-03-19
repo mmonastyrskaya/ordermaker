@@ -51,7 +51,31 @@ namespace WpfApplication4.Migrations
             {
                 context.OrdersInTime.AddOrUpdate(
                     o => o.OrderID,
-                    new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
+                    new Entities.OrderInTime { OrderID = order.OrderID, TableID = order.TableID, WaiterID = order.WaiterID }
+                    );
+            }
+
+            foreach (Entities.Bludo bludo in bludos)
+            {
+                context.Bludos.AddOrUpdate(
+                    b => b.BludoID,
+                    new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight = bludo.BludoWeight }
+                    );
+            }
+
+            foreach (Entities.Waiter waiter in waiters)
+            {
+                context.Waiters.AddOrUpdate(
+                    w => w.WaiterID,
+                    new Entities.Waiter { WaiterID = waiter.WaiterID, WaiterName = waiter.WaiterName, WaiterSurname = waiter.WaiterSurname, WaiterLogin = "", WaiterPassword = "" }
+                    );
+            }
+
+            foreach (Entities.BludoInOrder bio in bludosio)
+            {
+                context.BludosInOrder.AddOrUpdate(
+                    bo => bo.BludoID,
+                    new Entities.BludoInOrder { BludoID = bio.BludoID, BludoAmount = bio.BludoAmount, BludoStatus = bio.BludoStatus, OrderID = bio.OrderID, OrderTime = bio.OrderTime}
                     );
             }
 
