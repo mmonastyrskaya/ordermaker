@@ -18,7 +18,7 @@
         <Grid Grid.Row="0" Background="#FF01579B" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="1" Background="#0288d1" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="2" Background="#29b6f6" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2" />
+        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
@@ -26,6 +26,7 @@
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto"  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Мы рады приветствовать Вас в нашем ресторане Chef Michael Bolano!" IsEnabled="False" Height="31" Margin="0,11,0,11" Width="230"/>
         <TextBlock Text="Введите номер столика:" Grid.Column="1" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Margin="0,30,0,0" Width="176" />
         <TextBox HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap" Text="TextBox"  VerticalAlignment="Center" Width="75" BorderBrush="{x:Null}" />
+        <Button Content="Далее" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,30"  Foreground="White"/>
 
     </Grid>
 </Window>
