@@ -84,6 +84,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdministratorAuthentification.xaml.cs">
+      <DependentUpon>AdministratorAuthentification.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201603181940580_Migr2.cs" />
     <Compile Include="Migrations\201603181940580_Migr2.Designer.cs">
       <DependentUpon>201603181940580_Migr2.cs</DependentUpon>
@@ -133,12 +136,19 @@
     <Compile Include="Waiter.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="WaiterAuthentification.xaml.cs">
+      <DependentUpon>WaiterAuthentification.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
     <Compile Include="YourOrder.xaml.cs">
       <DependentUpon>YourOrder.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdministratorAuthentification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -165,6 +175,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Thanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WaiterAuthentification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
