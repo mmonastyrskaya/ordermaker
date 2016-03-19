@@ -23,6 +23,7 @@ namespace WpfApplication4
         public MainWindow()
         {
             InitializeComponent();
+            //bool check = Requests.MethodsAuth.Check(new Context(),"ivanov", "1234");
         }
     }
 }

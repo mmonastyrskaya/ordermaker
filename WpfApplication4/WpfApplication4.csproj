@@ -123,6 +123,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Requests\MethodsAuth.cs" />
     <Compile Include="Table.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
