@@ -22,14 +22,22 @@ namespace WpfApplication4.Migrations
             List<Entities.OrderInTime> orders = s.GetAllOrdersInTime();
             List<Entities.Table> tables = s.GetAllTables();
             List<Entities.Waiter> waiters = s.GetAllWaiters();
-            
 
+            foreach (Entities.Table table in tables)
+            {
+                context.Tables.AddOrUpdate(
+                    t => t.TableID,
+                    new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
+                    );
+            }
+             
             //using (var sr = new StreamReader(@"D:\Suppliers\Suppliers\source.csv"))
             //{
             //    // Skip headers
             //    sr.ReadLine();
             //    while (!sr.EndOfStream)
             //    {
+
             //        var line = sr.ReadLine();
             //        var items = line.Split(';');
             //        var dName = items[0];
