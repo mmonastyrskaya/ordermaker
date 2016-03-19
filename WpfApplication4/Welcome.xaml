@@ -4,8 +4,7 @@
         Title="MainWindow" Height="400" Width="300" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"></ColumnDefinition>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -18,22 +17,15 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#FF01579B" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="1" Background="#0288d1" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="2" Background="#29b6f6" Grid.ColumnSpan="2" Margin="0,0,0,159" Grid.RowSpan="2"/>
-        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2" Margin="0,0.5,0,0"/>
+        <Grid Grid.Row="2" Background="#29b6f6" Grid.ColumnSpan="2"/>
+        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2" />
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2" Margin="0,0,0,0.5"/>
-
-        <Label Width="100" Height="160" VerticalContentAlignment="Center">
-            <Label.Content>
-                <TextBlock TextWrapping="Wrap">Label Text And Wrap</TextBlock>
-            </Label.Content>
-        </Label>
+        <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
 
-        <Label Content="Мы рады приветствовать Вас в нашем ресторане Chef Michael Bolano!" Foreground="White"  FontFamily="./Roboto" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" Grid.ColumnSpan="2" Margin="10,12"/>
-        <Label Content="Кто Вы?" Grid.Column="1" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="67,0.5,112,0" />
-        <Button Content="Посетитель" Grid.Column="1" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="69,51.5,114,0" Background="{x:Null}" BorderBrush="{x:Null}"   />
-        <Button Content="Официант" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="72,0,117,63" Background="{x:Null}" BorderBrush="{x:Null}"/>
-        <Button Content="Администратор" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="57,101.5,103,38" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto"  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Мы рады приветствовать Вас в нашем ресторане Chef Michael Bolano!" IsEnabled="False" Height="31" Margin="0,11,0,11" Width="230"/>
+        <TextBlock Text="Введите номер столика:" Grid.Column="1" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Margin="0,30,0,0" Width="176" />
+        <TextBox HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap" Text="TextBox"  VerticalAlignment="Center" Width="75" BorderBrush="{x:Null}" />
+
     </Grid>
 </Window>
