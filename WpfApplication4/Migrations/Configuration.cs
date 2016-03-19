@@ -30,7 +30,31 @@ namespace WpfApplication4.Migrations
                     new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
                     );
             }
-             
+
+            //foreach (Entities.Bludo bludo in bludos)
+            //{
+            //    context.Bludos.AddOrUpdate(
+            //        b => b.BludoID,
+            //        new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight =bludo.BludoWeight }
+            //        );
+            //}
+
+            //foreach (Entities.Waiter waiter in waiters)
+            //{
+            //    context.Waiters.AddOrUpdate(
+            //        w => w.WaiterID,
+            //        new Entities.Waiter { WaiterID = waiter.WaiterID, WaiterName = waiter.WaiterName,WaiterSurname = waiter.WaiterSurname, WaiterLogin = "", WaiterPassword = "" }
+            //        );
+            //}
+
+            foreach (Entities.OrderInTime order in orders)
+            {
+                context.OrdersInTime.AddOrUpdate(
+                    o => o.OrderID,
+                    new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
+                    );
+            }
+
             //using (var sr = new StreamReader(@"D:\Suppliers\Suppliers\source.csv"))
             //{
             //    // Skip headers
