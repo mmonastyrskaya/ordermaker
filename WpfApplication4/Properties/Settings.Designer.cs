@@ -43,5 +43,15 @@ namespace WpfApplication4.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\v11.0;Initial Catalog=TPDB;Integrated Security=True")]
+        public string TPDBConnectionString {
+            get {
+                return ((string)(this["TPDBConnectionString"]));
+            }
+        }
     }
 }
