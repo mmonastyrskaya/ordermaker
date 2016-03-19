@@ -126,11 +126,17 @@
     <Compile Include="Table.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Thanks.xaml.cs">
+      <DependentUpon>Thanks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Waiter.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="YourOrder.xaml.cs">
+      <DependentUpon>YourOrder.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -157,7 +163,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Thanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="YourOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
