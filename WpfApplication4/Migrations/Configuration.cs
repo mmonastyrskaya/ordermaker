@@ -37,16 +37,16 @@ namespace WpfApplication4.Migrations
 
             //foreach (Entities.Waiter waiter in waiters)
             //{
-                //context.Waiters.AddOrUpdate(b => b.WaiterID,
-                //new Entities.Waiter
-                //{
-                //    WaiterID = 2,
-                //    WaiterName = "",
-                //    WaiterSurname = "",
-                //    WaiterLogin = "",
-                //    WaiterPassword = ""
-                //});
-                //context.SaveChanges();
+            //context.Waiters.AddOrUpdate(w =>w.WaiterID,
+            //new Entities.Waiter
+            //{
+            //    WaiterID = 2,
+            //    WaiterName = "",
+            //    WaiterSurname = "",
+            //    WaiterLogin = "",
+            //    WaiterPassword = ""
+            //});
+            //context.SaveChanges();
             //}
 
             //context.Bludos.AddOrUpdate(b => b.BludoID,
