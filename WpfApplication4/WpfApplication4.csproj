@@ -99,6 +99,15 @@
     <Compile Include="AdministratorOptions.xaml.cs">
       <DependentUpon>AdministratorOptions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListOfDishes.xaml.cs">
+      <DependentUpon>ListOfDishes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfTables.xaml.cs">
+      <DependentUpon>ListOfTables.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfWaiters.xaml.cs">
+      <DependentUpon>ListOfWaiters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MakingOrder.xaml.cs">
       <DependentUpon>MakingOrder.xaml</DependentUpon>
     </Compile>
@@ -177,6 +186,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdministratorOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListOfDishes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListOfTables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListOfWaiters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
