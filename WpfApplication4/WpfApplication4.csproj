@@ -99,6 +99,9 @@
     <Compile Include="AdministratorOptions.xaml.cs">
       <DependentUpon>AdministratorOptions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MakingOrder.xaml.cs">
+      <DependentUpon>MakingOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201603181940580_Migr2.cs" />
     <Compile Include="Migrations\201603181940580_Migr2.Designer.cs">
       <DependentUpon>201603181940580_Migr2.cs</DependentUpon>
@@ -202,6 +205,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MakingOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Thanks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
