@@ -139,6 +139,10 @@
     <Compile Include="Migrations\201603201324329_Final.Designer.cs">
       <DependentUpon>201603201324329_Final.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603202154400_Palanova.cs" />
+    <Compile Include="Migrations\201603202154400_Palanova.Designer.cs">
+      <DependentUpon>201603202154400_Palanova.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603201324329_Final.resx">
       <DependentUpon>201603201324329_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603202154400_Palanova.resx">
+      <DependentUpon>201603202154400_Palanova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

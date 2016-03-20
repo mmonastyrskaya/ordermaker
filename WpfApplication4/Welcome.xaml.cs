@@ -27,7 +27,8 @@ namespace WpfApplication4
         private void Call_Click(object sender, RoutedEventArgs e)
         {            
             Context context = new Context();
-            bool check = Requests.MethodsOrder.CheckLabel(context,int.Parse(LabelTable.Text));
+            bool check = Requests.MethodsOrder.CheckLabel(context,int.Parse(LabelTable.Text));            
+            
             if (check == true)
             {
                 YourOrder yo = new YourOrder();

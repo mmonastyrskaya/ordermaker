@@ -14,7 +14,7 @@ namespace WpfApplication4.Migrations
         }
 
         protected override void Seed(WpfApplication4.Context context)
-        {           
+        {
             OrderService s = new OrderService();
 
             List<Entities.Bludo> bludos = s.GetAllBludos();
@@ -28,15 +28,15 @@ namespace WpfApplication4.Migrations
                 context.Tables.AddOrUpdate(
                     t => t.TableID,
                     new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
-                    );                
+                    );
             }
             context.SaveChanges();
-                       
+
             foreach (Entities.Bludo bludo in bludos)
             {
                 context.Bludos.AddOrUpdate(
                     b => b.BludoID,
-                    new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight = bludo.BludoWeight, BludoTime = DateTime.Parse("1900-01-01 00:00:00")}
+                    new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight = bludo.BludoWeight, BludoTime = DateTime.Parse("1900-01-01 00:00:00") }
                     );
             }
             context.SaveChanges();
@@ -47,7 +47,7 @@ namespace WpfApplication4.Migrations
                     w => w.WaiterID,
                     new Entities.Waiter { WaiterID = waiter.WaiterID, WaiterName = waiter.WaiterName, WaiterSurname = waiter.WaiterSurname, WaiterLogin = "waiter", WaiterPassword = "1234" }
                     );
-            }            
+            }
 
             foreach (Entities.OrderInTime order in orders)
             {
@@ -66,7 +66,7 @@ namespace WpfApplication4.Migrations
             //        foreach (var o in context.OrdersInTime.Where(o => o.OrderID == bio.OrderID))
             //        {
             //            var oID = o.OrderID;
-                        
+
             //            context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bio.BludoAmount, BludoStatus = bio.BludoStatus, OrderID = oID, OrderTime = DateTime.Parse((bio.OrderTime).ToString()) }
             //        );
             //        }

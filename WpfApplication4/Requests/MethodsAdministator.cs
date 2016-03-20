@@ -28,8 +28,6 @@ namespace WpfApplication4.Requests
             {
                 //string error = "Проверьте правильность введенного логина.";
             }
-
-            check = true; //временно
             return check;
         }
 

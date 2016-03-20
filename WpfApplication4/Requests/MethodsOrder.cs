@@ -20,14 +20,36 @@ namespace WpfApplication4.Requests
             {
                 table = context.Tables.First(t => t.TableLabel == label);
             }
-            catch (ArgumentNullException e)
+            catch (Exception e)
             {
                 check = false;
                 //string error = "Проверьте правильность введенного логина.";
             }
 
+            if (label == 110) { check = true; }//временно
+
             return check;
         }
+
+        ////public static bool CheckLabel(Context context, int label)
+        //{
+        //    bool check = true;
+        //    Entities.Table table;
+
+        //    try
+        //    {
+        //        table = context.Tables.First(t => t.TableLabel == label);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        check = false;
+        //        //string error = "Проверьте правильность введенного логина.";
+        //    }
+
+        //    if (label == 110) { check = true; }//временно
+
+        //    return check;
+        //}
 
         public static List<Entities.Bludo> GetBludosTableID(Context context, int id_table)
         {
