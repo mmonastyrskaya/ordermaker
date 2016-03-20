@@ -23,5 +23,18 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void Call_Click(object sender, RoutedEventArgs e)
+        {            
+            Context context = new Context();
+            bool check = Requests.MethodsOrder.CheckLabel(context,int.Parse(LabelTable.Text));
+            if (check == true)
+            {
+                YourOrder yo = new YourOrder();
+                yo.Show();
+                this.Close();
+            }
+            else { MessageBox.Show("Стола с таким номером не существует."); }
+        }
     }
 }

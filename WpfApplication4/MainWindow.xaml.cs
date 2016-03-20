@@ -97,5 +97,12 @@ namespace WpfApplication4
             wa.Show();
             this.Close();
         }
+
+        private void Client_Click(object sender, RoutedEventArgs e)
+        {
+            Welcome w = new Welcome();
+            w.Show();
+            this.Close();
+        }
     }
 }

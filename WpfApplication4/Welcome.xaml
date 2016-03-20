@@ -25,8 +25,8 @@
 
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto"  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Мы рады приветствовать Вас в нашем ресторане Chef Michael Bolano!" IsEnabled="False" Height="31" Margin="0,11,0,11" Width="230"/>
         <TextBlock Text="Введите номер столика:" Grid.Column="1" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Height="19" Margin="0,30,0,0" Width="176" />
-        <TextBox HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap" Text="TextBox"  VerticalAlignment="Center" Width="75" BorderBrush="{x:Null}" />
-        <Button Content="Позвать официанта" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="115" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,30"  Foreground="White"/>
+        <TextBox x:Name="LabelTable" HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Center" Width="75" BorderBrush="{x:Null}" />
+        <Button x:Name="Call" Content="Позвать официанта" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="115" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,30"  Foreground="White" Click="Call_Click"/>
         
 
     </Grid>

@@ -154,7 +154,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Requests\MethodsAdmin.cs" />
     <Compile Include="Requests\MethodsAdministator.cs" />
     <Compile Include="Requests\MethodsOrder.cs" />
     <Compile Include="Requests\MethodsWaiter.cs" />

@@ -24,11 +24,12 @@ namespace WpfApplication4.Requests
                 }
 
             }
-            catch (ArgumentNullException e)
+            catch (Exception e)
             {
                 //string error = "Проверьте правильность введенного логина.";
             }
 
+            check = true; //временно
             return check;
         }
 
