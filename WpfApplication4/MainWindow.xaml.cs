@@ -82,7 +82,7 @@ namespace WpfApplication4
             //        }
             //    }
             //}
-            List<Entities.BludoInOrder> bludos = Requests.MethodsOrder.GetBludosTableID(cont, 10);
+            List<Entities.Bludo> bludos = Requests.MethodsOrder.GetBludosTableID(cont, 10);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
