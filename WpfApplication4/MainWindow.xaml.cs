@@ -88,7 +88,8 @@ namespace WpfApplication4
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             WaiterAuthentification wa = new WaiterAuthentification();
-            //WaiterAuthentification.
+            wa.Show();
+            this.Close();
         }
     }
 }

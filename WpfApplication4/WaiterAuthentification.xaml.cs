@@ -23,5 +23,15 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool check = Requests.MethodsAdmin.Check(new Context(), Login.Text, Password.Text);
+            if (check == true)
+            {
+
+            }
+            else { MessageBox.Show("Логин или пароль введены неверно."); }
+        }
     }
 }
