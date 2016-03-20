@@ -19,9 +19,55 @@ namespace WpfApplication4
     /// </summary>
     public partial class MakingOrder : Window
     {
-        public MakingOrder()
-        {
+        Context context = new Context();
+        int waiterid;
+        public MakingOrder(int id)
+        {            
+            waiterid = id;
             InitializeComponent();
+
+            Status.Items.Add("заказ передан");
+            Status.Items.Add("готовится");
+            Status.Items.Add("готово");
+
+            List<Entities.Table> tables = Requests.MethodsAdmininstrator.GetAllTabless(context);
+            List<Entities.Bludo> bludos = Requests.MethodsAdmininstrator.GetAllBludos(context);
+
+            foreach (Entities.Table table in tables)
+            {
+                ChooseT.Items.Add(table.TableLabel);
+            }
+
+            foreach (Entities.Bludo bludo in bludos)
+            {
+                ChooseB.Items.Add(bludo.BludoName);
+            }
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void AddBIO_Click(object sender, RoutedEventArgs e)
+        {
+            Entities.OrderInTime order = new Entities.OrderInTime();
+            order.WaiterID = waiterid;
+            order.TableID = 110;
+
+            Requests.MethodsWaiter.InsertOrderInTime(context, order);
+
+            Entities.BludoInOrder bio = new Entities.BludoInOrder();
+            bio.BludoAmount = int.Parse(AmountB.Text);
+            bio.BludoStatus = (Status.SelectedItem).ToString();
+            bio.OrderID = order.OrderID;
+
+            var bludo = Requests.MethodsOrder.GetBludoByName(context, (ChooseB.SelectedItem).ToString());
+            bio.BludoID = bludo.BludoID;
+            bio.OrderTime = DateTime.Now;
+
+            Requests.MethodsWaiter.InsertBludoInOrder(context, bio);
         }
     }
 }

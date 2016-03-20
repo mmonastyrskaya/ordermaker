@@ -19,6 +19,7 @@ namespace WpfApplication4
     /// </summary>
     public partial class Welcome : Window
     {
+        Context context = new Context();
         public Welcome()
         {
             InitializeComponent();
@@ -27,11 +28,12 @@ namespace WpfApplication4
         private void Call_Click(object sender, RoutedEventArgs e)
         {            
             Context context = new Context();
-            bool check = Requests.MethodsOrder.CheckLabel(context,int.Parse(LabelTable.Text));            
-            
+            bool check = Requests.MethodsOrder.CheckLabel(context,int.Parse(LabelTable.Text));
+                       
             if (check == true)
             {
-                YourOrder yo = new YourOrder();
+                Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));               
+                YourOrder yo = new YourOrder(t.TableID);
                 yo.Show();
                 this.Close();
             }

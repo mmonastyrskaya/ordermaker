@@ -19,7 +19,11 @@
         <Grid Grid.Row="0" Background="#FF01579B" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="1" Background="#0288d1" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="2" Background="#29b6f6" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2"/>
+        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2">
+            <ComboBox x:Name="ChooseT" HorizontalAlignment="Left" Margin="169,4,0,0" VerticalAlignment="Top" Width="99"/>
+            <ComboBox x:Name="ChooseB" HorizontalAlignment="Left" Margin="169,36,0,0" VerticalAlignment="Top" Width="99"/>
+            <ComboBox x:Name="Status" HorizontalAlignment="Left" Margin="169,97,0,0" VerticalAlignment="Top" Width="99" SelectionChanged="ComboBox_SelectionChanged"/>
+        </Grid>
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
@@ -43,16 +47,9 @@
             <Label Content="Блюдо" Grid.Row="1" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Количество" Grid.Row="2" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Статус" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            <Label Content="Время заказа" Grid.Row="4" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            
+            <TextBox x:Name="AmountB" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
 
-            <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <DatePicker Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-
-            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button x:Name="AddBIO" Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AddBIO_Click"/>
             <Button Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
         </Grid>
 

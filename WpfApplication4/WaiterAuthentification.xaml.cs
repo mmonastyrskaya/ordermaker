@@ -19,6 +19,7 @@ namespace WpfApplication4
     /// </summary>
     public partial class WaiterAuthentification : Window
     {
+        Context context = new Context();
         public WaiterAuthentification()
         {
             InitializeComponent();
@@ -29,7 +30,8 @@ namespace WpfApplication4
             bool check = Requests.MethodsAdmininstrator.Check(new Context(), Login.Text, Password.Text);
             if (check == true)
             {
-                MakingOrder mo = new MakingOrder();
+                Entities.Waiter w = Requests.MethodsWaiter.GetWaiterByLogin(context, Login.Text);
+                MakingOrder mo = new MakingOrder(w.WaiterID);
                 mo.Show();
 
                 MainWindow mw = new MainWindow();

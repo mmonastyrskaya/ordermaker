@@ -19,8 +19,10 @@ namespace WpfApplication4
     /// </summary>
     public partial class YourOrder : Window
     {
-        public YourOrder()
+        int tabelid;
+        public YourOrder(int id)
         {
+            tabelid = id;
             InitializeComponent();
         }
     }

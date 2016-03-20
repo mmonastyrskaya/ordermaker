@@ -31,6 +31,25 @@ namespace WpfApplication4.Requests
             return check;
         }
 
+        public static Entities.Table GetTableByLabel(Context context, int label)
+        {
+            //Entities.Table t = new Entities.Table();
+            var table = (from r in context.Tables
+                         where r.TableLabel == label
+                         select r).First();           
+
+            return table;
+        }
+
+        public static Entities.Bludo GetBludoByName(Context context, string name)
+        {
+            //Entities.Table t = new Entities.Table();
+            var bludo = (from r in context.Bludos
+                         where r.BludoName == name
+                         select r).First();
+
+            return bludo;
+        }
         ////public static bool CheckLabel(Context context, int label)
         //{
         //    bool check = true;

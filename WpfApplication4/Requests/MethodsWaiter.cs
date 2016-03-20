@@ -28,6 +28,13 @@ namespace WpfApplication4.Requests
             }
         }
 
+        public static void InsertOrderInTime(Context context, Entities.OrderInTime orderIT)
+        {
+            context.OrdersInTime.Add(new Entities.OrderInTime { TableID = orderIT.TableID, WaiterID=orderIT.WaiterID });
+            context.SaveChanges();
+        }
+
+
         public static void UpdateBludoInOrder(Context context, Entities.BludoInOrder bludo)
         {
             var bludoio = (from c in context.BludosInOrder
@@ -35,6 +42,16 @@ namespace WpfApplication4.Requests
                        select c).First();
 
             bludoio.BludoStatus = bludo.BludoStatus;            
+        }
+
+        public static Entities.Waiter GetWaiterByLogin(Context context, string login)
+        {
+            //Entities.Waiter w = new Entities.Waiter();
+            var waiter = (from r in context.Waiters
+                         where r.WaiterLogin == login
+                         select r).First();
+           
+            return waiter;
         }
     }
 }
