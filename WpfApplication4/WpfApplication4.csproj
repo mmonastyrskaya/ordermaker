@@ -155,6 +155,7 @@
       <DependentUpon>OrderModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Requests\MethodsAdmin.cs" />
+    <Compile Include="Requests\MethodsAdministator.cs" />
     <Compile Include="Requests\MethodsOrder.cs" />
     <Compile Include="Table.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
