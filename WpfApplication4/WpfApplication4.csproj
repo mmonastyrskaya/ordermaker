@@ -111,6 +111,10 @@
     <Compile Include="Migrations\201603182338520_T1.Designer.cs">
       <DependentUpon>201603182338520_T1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603201324329_Final.cs" />
+    <Compile Include="Migrations\201603201324329_Final.Designer.cs">
+      <DependentUpon>201603201324329_Final.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +131,7 @@
       <DependentUpon>OrderModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Requests\MethodsAdmin.cs" />
+    <Compile Include="Requests\MethodsOrder.cs" />
     <Compile Include="Table.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
@@ -234,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603182338520_T1.resx">
       <DependentUpon>201603182338520_T1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201324329_Final.resx">
+      <DependentUpon>201603201324329_Final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

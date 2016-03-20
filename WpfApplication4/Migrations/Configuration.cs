@@ -14,7 +14,7 @@ namespace WpfApplication4.Migrations
         }
 
         protected override void Seed(WpfApplication4.Context context)
-        {
+        {           
             OrderService s = new OrderService();
 
             List<Entities.Bludo> bludos = s.GetAllBludos();
@@ -31,37 +31,46 @@ namespace WpfApplication4.Migrations
                     );                
             }
             context.SaveChanges();
+                       
+            foreach (Entities.Bludo bludo in bludos)
+            {
+                context.Bludos.AddOrUpdate(
+                    b => b.BludoID,
+                    new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight = bludo.BludoWeight, BludoTime = DateTime.Parse("1900-01-01 00:00:00")}
+                    );
+            }
+            context.SaveChanges();
 
-            //foreach (Entities.OrderInTime order in orders)
-            //{
-            //    context.OrdersInTime.AddOrUpdate(
-            //        o => o.OrderID,
-            //        new Entities.OrderInTime { OrderID = order.OrderID, TableID = order.TableID, WaiterID = order.WaiterID }
-            //        );
-            //}
+            foreach (Entities.Waiter waiter in waiters)
+            {
+                context.Waiters.AddOrUpdate(
+                    w => w.WaiterID,
+                    new Entities.Waiter { WaiterID = waiter.WaiterID, WaiterName = waiter.WaiterName, WaiterSurname = waiter.WaiterSurname, WaiterLogin = "waiter", WaiterPassword = "1234" }
+                    );
+            }            
 
-            //foreach (Entities.Bludo bludo in bludos)
-            //{
-            //    context.Bludos.AddOrUpdate(
-            //        b => b.BludoID,
-            //        new Entities.Bludo { BludoID = bludo.BludoID, BludoName = bludo.BludoName, BludoCategory = bludo.BludoCategory, BludoPrice = bludo.BludoPrice, BludoWeight = bludo.BludoWeight }
-            //        );
-            //}
-
-            //foreach (Entities.Waiter waiter in waiters)
-            //{
-            //    context.Waiters.AddOrUpdate(
-            //        w => w.WaiterID,
-            //        new Entities.Waiter { WaiterID = waiter.WaiterID, WaiterName = waiter.WaiterName, WaiterSurname = waiter.WaiterSurname, WaiterLogin = "", WaiterPassword = "" }
-            //        );
-            //}
+            foreach (Entities.OrderInTime order in orders)
+            {
+                context.OrdersInTime.AddOrUpdate(
+                    o => o.OrderID,
+                    new Entities.OrderInTime { OrderID = order.OrderID, TableID = order.TableID, WaiterID = order.WaiterID }
+                    );
+            }
 
             //foreach (Entities.BludoInOrder bio in bludosio)
             //{
-            //    context.BludosInOrder.AddOrUpdate(
-            //        bo => bo.BludoID,
-            //        new Entities.BludoInOrder { BludoID = bio.BludoID, BludoAmount = bio.BludoAmount, BludoStatus = bio.BludoStatus, OrderID = bio.OrderID, OrderTime = bio.OrderTime}
+            //    foreach (var b in context.Bludos.Where(b => b.BludoID == bio.BludoID))
+            //    {
+            //        var bID = b.BludoID;
+
+            //        foreach (var o in context.OrdersInTime.Where(o => o.OrderID == bio.OrderID))
+            //        {
+            //            var oID = o.OrderID;
+                        
+            //            context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bio.BludoAmount, BludoStatus = bio.BludoStatus, OrderID = oID, OrderTime = DateTime.Parse((bio.OrderTime).ToString()) }
             //        );
+            //        }
+            //    }
             //}
         }
     }
