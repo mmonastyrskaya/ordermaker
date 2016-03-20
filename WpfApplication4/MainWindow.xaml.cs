@@ -28,8 +28,14 @@ namespace WpfApplication4
             InitializeComponent();
             Context cont = new Context();
 
-            OrderService s = new OrderService();
-            List<Entities.BludoInOrder> bludosio = s.GetAllBludosInOrder();
+            //OrderService s = new OrderService();
+            //List<Entities.BludoInOrder> bludosio = s.GetAllBludosInOrder();
+
+            //MainWindow mw1 = new MainWindow();
+            //mw1.Show();
+
+            //MainWindow mw2 = new MainWindow();
+            //mw2.Show();
 
             //Entities.Table table = new Entities.Table();
             //Entities.Bludo bludo = new Entities.Bludo();
@@ -83,6 +89,7 @@ namespace WpfApplication4
             //    }
             //}
             //List<Entities.Bludo> bludos = Requests.MethodsOrder.GetBludosTableID(cont, 10);
+            double sum = Requests.MethodsOrder.GetSumByTableID(cont, 10);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -33,7 +33,7 @@ namespace WpfApplication4.Requests
         {
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).Last();
+                         select r).OrderByDescending(o => o.OrderID).First();            
 
             List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
 
@@ -73,34 +73,34 @@ namespace WpfApplication4.Requests
 
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).Last();            
+                         select r).OrderByDescending(o => o.OrderID).First();            
 
-            List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
-
-            var bluda = from r in context.BludosInOrder
-                        select r;
-
-            var bludas = from r in context.Bludos
-                         select r;
+            //List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
             
-            foreach (Entities.BludoInOrder singleBludoIO in bluda)
-            {
-                Entities.BludoInOrder bio = new Entities.BludoInOrder();
-                bio.BludoID = singleBludoIO.BludoID;
-                bio.OrderID = singleBludoIO.OrderID;
-                bio.BludoAmount = singleBludoIO.BludoAmount;
+            //var bluda = from r in context.BludosInOrder
+            //            select r;
 
-                foreach (Entities.Bludo singleBludo in bludas)
-                {
-                    Entities.Bludo b = new Entities.Bludo();
-                    b.BludoID = singleBludo.BludoID;
-                    b.BludoPrice = singleBludo.BludoPrice;
+            //var bludas = from r in context.Bludos
+            //             select r;
+            
+            //foreach (Entities.BludoInOrder singleBludoIO in bluda)
+            //{
+            //    Entities.BludoInOrder bio = new Entities.BludoInOrder();
+            //    bio.BludoID = singleBludoIO.BludoID;
+            //    bio.OrderID = singleBludoIO.OrderID;
+            //    bio.BludoAmount = singleBludoIO.BludoAmount;
 
-                    if (b.BludoID == bio.BludoID) { sum += (double)b.BludoPrice*bio.BludoAmount; }
-                }
+            //    foreach (Entities.Bludo singleBludo in bludas)
+            //    {
+            //        Entities.Bludo b = new Entities.Bludo();
+            //        b.BludoID = singleBludo.BludoID;
+            //        b.BludoPrice = singleBludo.BludoPrice;
 
-                if (bio.OrderID == order.OrderID) { listBludaInOrder.Add(bio); }
-            }
+            //        if (b.BludoID == bio.BludoID) { sum += (double)b.BludoPrice*bio.BludoAmount; }
+            //    }
+
+            //    if (bio.OrderID == order.OrderID) { listBludaInOrder.Add(bio); }
+            //}
 
             List<Entities.Bludo> listBluda = new List<Entities.Bludo>();            
 

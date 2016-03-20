@@ -29,7 +29,12 @@ namespace WpfApplication4
             bool check = Requests.MethodsAdmin.Check(new Context(), Login.Text, Password.Text);
             if (check == true)
             {
+                MakingOrder mo = new MakingOrder();
+                mo.Show();
 
+                MainWindow mw = new MainWindow();
+                mw.Show();
+                this.Close();
             }
             else { MessageBox.Show("Логин или пароль введены неверно."); }
         }
