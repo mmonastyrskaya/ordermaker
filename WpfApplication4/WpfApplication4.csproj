@@ -84,8 +84,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddingDish.xaml.cs">
+      <DependentUpon>AddingDish.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorAuthentification.xaml.cs">
       <DependentUpon>AdministratorAuthentification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorOptions.xaml.cs">
+      <DependentUpon>AdministratorOptions.xaml</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201603181940580_Migr2.cs" />
     <Compile Include="Migrations\201603181940580_Migr2.Designer.cs">
@@ -144,7 +150,15 @@
     <Compile Include="YourOrder.xaml.cs">
       <DependentUpon>YourOrder.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddingDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdministratorAuthentification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdministratorOptions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
