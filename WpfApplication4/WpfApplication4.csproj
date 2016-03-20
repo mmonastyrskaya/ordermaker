@@ -157,6 +157,7 @@
     <Compile Include="Requests\MethodsAdmin.cs" />
     <Compile Include="Requests\MethodsAdministator.cs" />
     <Compile Include="Requests\MethodsOrder.cs" />
+    <Compile Include="Requests\MethodsWaiter.cs" />
     <Compile Include="Table.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
