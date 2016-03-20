@@ -28,8 +28,9 @@ namespace WpfApplication4.Migrations
                 context.Tables.AddOrUpdate(
                     t => t.TableID,
                     new Entities.Table { TableID = table.TableID, TableLabel = table.TableLabel, TableLocation = table.TableLocation, TablePlaces = table.TablePlaces }
-                    );
+                    );                
             }
+            context.SaveChanges();
 
             //foreach (Entities.OrderInTime order in orders)
             //{
