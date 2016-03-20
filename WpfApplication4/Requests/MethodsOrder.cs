@@ -33,7 +33,7 @@ namespace WpfApplication4.Requests
         {
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).First();
+                         select r).Last();
 
             List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
 
@@ -73,7 +73,7 @@ namespace WpfApplication4.Requests
 
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).First();            
+                         select r).Last();            
 
             List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
 

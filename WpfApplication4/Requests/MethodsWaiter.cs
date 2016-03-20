@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Data.Linq;
+
 
 namespace WpfApplication4.Requests
 {
@@ -18,10 +22,19 @@ namespace WpfApplication4.Requests
                 {
                     var oID = o.OrderID;
 
-                    context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bludoIO.BludoAmount, BludoStatus = bludoIO.BludoStatus, OrderID = oID, OrderTime = DateTime.Now }
-                );
+                    context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bludoIO.BludoAmount, BludoStatus = bludoIO.BludoStatus, OrderID = oID, OrderTime = DateTime.Now });
+                    context.SaveChanges();
                 }
             }
+        }
+
+        public static void UpdateBludoInOrder(Context context, Entities.BludoInOrder bludo)
+        {
+            var bludoio = (from c in context.BludosInOrder
+                       where (c.BludoID == bludo.BludoID)&&(c.OrderID == bludo.OrderID)
+                       select c).First();
+
+            bludoio.BludoStatus = bludo.BludoStatus;            
         }
     }
 }
