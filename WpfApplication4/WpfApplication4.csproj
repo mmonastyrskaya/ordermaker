@@ -87,6 +87,12 @@
     <Compile Include="AddingDish.xaml.cs">
       <DependentUpon>AddingDish.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddingTable.xaml.cs">
+      <DependentUpon>AddingTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddingWaiter.xaml.cs">
+      <DependentUpon>AddingWaiter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorAuthentification.xaml.cs">
       <DependentUpon>AdministratorAuthentification.xaml</DependentUpon>
     </Compile>
@@ -152,6 +158,14 @@
       <DependentUpon>YourOrder.xaml</DependentUpon>
     </Compile>
     <Page Include="AddingDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddingTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddingWaiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
