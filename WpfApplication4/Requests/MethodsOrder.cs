@@ -31,37 +31,13 @@ namespace WpfApplication4.Requests
 
         public static List<Entities.Bludo> GetBludosTableID(Context context, int id_table)
         {
+            List<Entities.Bludo> listBluda = new List<Entities.Bludo>();
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).OrderByDescending(o => o.OrderID).First();            
-
-            List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
-
-            var bluda = from r in context.BludosInOrder
-                        select r;
-
-            var bludas = from r in context.Bludos
-                         select r;
-
-            List<Entities.Bludo> listBluda = new List<Entities.Bludo>();
-
-            foreach (Entities.BludoInOrder singleBludoIO in bluda)
+                         select r).OrderByDescending(o => o.OrderID).First();
+            foreach (Entities.BludoInOrder bludo in order.BludoInOrders)
             {
-                Entities.BludoInOrder bio = new Entities.BludoInOrder();
-                bio.BludoID = singleBludoIO.BludoID;
-                bio.OrderID = singleBludoIO.OrderID;
-                bio.BludoAmount = singleBludoIO.BludoAmount;
-
-                foreach (Entities.Bludo singleBludo in bludas)
-                {
-                    Entities.Bludo b = new Entities.Bludo();
-                    b.BludoID = singleBludo.BludoID;
-                    b.BludoPrice = singleBludo.BludoPrice;
-
-                    if (b.BludoID == bio.BludoID) { listBluda.Add(b); }
-                }
-
-                if (bio.OrderID == order.OrderID) { listBludaInOrder.Add(bio); }
+                listBluda.Add(bludo.Bludo);
             }
 
             return listBluda;
@@ -73,8 +49,11 @@ namespace WpfApplication4.Requests
 
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
-                         select r).OrderByDescending(o => o.OrderID).First();            
-
+                         select r).OrderByDescending(o => o.OrderID).First();
+            foreach (Entities.BludoInOrder bludo in order.BludoInOrders)
+            {
+                sum += System.Convert.ToDouble(bludo.Bludo.BludoPrice) * bludo.BludoAmount;
+            }
             //List<Entities.BludoInOrder> listBludaInOrder = new List<Entities.BludoInOrder>();
             
             //var bluda = from r in context.BludosInOrder

@@ -26,7 +26,7 @@ namespace WpfApplication4
         public MainWindow()
         {
             InitializeComponent();
-            Context cont = new Context();
+            //Context cont = new Context();
 
             //OrderService s = new OrderService();
             //List<Entities.BludoInOrder> bludosio = s.GetAllBludosInOrder();
@@ -89,7 +89,6 @@ namespace WpfApplication4
             //    }
             //}
             //List<Entities.Bludo> bludos = Requests.MethodsOrder.GetBludosTableID(cont, 10);
-            double sum = Requests.MethodsOrder.GetSumByTableID(cont, 10);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
