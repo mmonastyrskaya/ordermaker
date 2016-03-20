@@ -26,7 +26,7 @@
 
 
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Введите логин и пароль" IsEnabled="False" Height="14" Margin="0,11,0,11" Width="200" TextAlignment="Center"/>
-        <TextBox x:Name="Login" HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Margin="110,41,109,0"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Center" Height="23"  Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Margin="110,41,109,0" TextChanged="Login_TextChanged"/>
         <Label Content="Логин" Foreground="White" FontFamily="./Roboto" HorizontalAlignment="Left" Grid.Row="3" Margin="110,16,0,0" VerticalAlignment="Top" Width="45"/>
         <Label Content="Пароль" Foreground="White" FontFamily="./Roboto" HorizontalAlignment="Left" Grid.Row="3" Margin="110,64,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Далее" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="70" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,30"  Foreground="White" Click="Button_Click"/>

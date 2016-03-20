@@ -26,7 +26,7 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool check = Requests.MethodsAdmin.Check(new Context(), Login.Text, Password.Text);
+            bool check = Requests.MethodsAdmininstrator.Check(new Context(), Login.Text, Password.Text);
             if (check == true)
             {
                 MakingOrder mo = new MakingOrder();
@@ -37,6 +37,11 @@ namespace WpfApplication4
                 this.Close();
             }
             else { MessageBox.Show("Логин или пароль введены неверно."); }
+        }
+
+        private void Login_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
