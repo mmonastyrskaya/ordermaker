@@ -65,13 +65,20 @@ namespace WpfApplication4
             //Context contextnew = new Context();
             
             Entities.BludoInOrder bio = new Entities.BludoInOrder();
-            bio.BludoAmount = int.Parse(AmountB.Text);
-            bio.BludoStatus = (Status.SelectedItem).ToString();
-            bio.OrderID = order.OrderID;
+            try
+            {
+                bio.BludoAmount = int.Parse(AmountB.Text);
+                bio.BludoStatus = (Status.SelectedItem).ToString();
+                bio.OrderID = order.OrderID;
 
-            var bludo = Requests.MethodsOrder.GetBludoByName(context, (ChooseB.SelectedItem).ToString());
-            bio.BludoID = bludo.BludoID;
-            bio.OrderTime = DateTime.Now;
+                var bludo = Requests.MethodsOrder.GetBludoByName(context, (ChooseB.SelectedItem).ToString());
+                bio.BludoID = bludo.BludoID;
+                bio.OrderTime = DateTime.Now;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Проверьте правильность ввода данных.");
+            }
 
             Requests.MethodsWaiter.InsertBludoInOrder(context, bio);
 
