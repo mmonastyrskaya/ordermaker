@@ -54,7 +54,7 @@ namespace WpfApplication4
         {
             Entities.OrderInTime order = new Entities.OrderInTime();
             order.WaiterID = waiterid;
-            order.TableID = 110;
+            order.TableID = 1;
 
             Requests.MethodsWaiter.InsertOrderInTime(context, order);
 

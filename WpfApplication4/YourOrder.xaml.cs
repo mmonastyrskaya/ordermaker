@@ -20,10 +20,18 @@ namespace WpfApplication4
     public partial class YourOrder : Window
     {
         int tabelid;
+        Context context = new Context();
         public YourOrder(int id)
         {
             tabelid = id;
             InitializeComponent();
+
+            List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
+            foreach (Entities.Bludo item in bluda)
+            {
+                ListBox.Items.Add(item); 
+            }
+                
         }
     }
 }
