@@ -31,6 +31,8 @@ namespace WpfApplication4.Requests
             return check;
         }
 
+        //public static Entities.OrderInTime GetOrderBy
+
         public static Entities.Table GetTableByLabel(Context context, int label)
         {
             //Entities.Table t = new Entities.Table();
@@ -73,14 +75,46 @@ namespace WpfApplication4.Requests
         public static List<Entities.Bludo> GetBludosTableID(Context context, int id_table)
         {
             List<Entities.Bludo> listBluda = new List<Entities.Bludo>();
+            
             var order = (from r in context.OrdersInTime
                          where r.TableID == id_table
                          select r).OrderByDescending(o => o.OrderID).First();
-            foreach (Entities.BludoInOrder bludo in order.BludoInOrders)
+
+            var bluda = from r in context.BludosInOrder
+                        where r.OrderID==order.OrderID
+                       select r;
+
+            foreach (Entities.BludoInOrder bludo in bluda)
             {
+                var bludas = from r in context.Bludos
+                             where r.BludoID == bludo.OrderID
+                             select r;
                 listBluda.Add(bludo.Bludo);
             }
+            
+            
+            
+            //foreach (Entities.BludoInOrder singleBludoIO in bluda)
+            //{
+            //    Entities.BludoInOrder bio = new Entities.BludoInOrder();
+            //    bio.BludoID = singleBludoIO.BludoID;
+            //    bio.OrderID = singleBludoIO.OrderID;
+            //    bio.BludoAmount = singleBludoIO.BludoAmount;
 
+            //    var bludas = from r in context.Bludos
+            //                 where r.BludoID==bio.
+            //             select r;
+            //    foreach (Entities.Bludo singleBludo in bludas)
+            //    {
+            //        Entities.Bludo b = new Entities.Bludo();
+            //        b.BludoID = singleBludo.BludoID;
+            //        b.BludoPrice = singleBludo.BludoPrice;
+
+            //        if (b.BludoID == bio.BludoID) {  }
+            //    }
+
+            //    if (bio.OrderID == order.OrderID) { listBludaInOrder.Add(bio); }
+            
             return listBluda;
         }
 

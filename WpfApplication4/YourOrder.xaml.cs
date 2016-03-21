@@ -21,6 +21,8 @@ namespace WpfApplication4
     {
         int tabelid;
         Context context = new Context();
+        public delegate void MethodContainer();
+        public event MethodContainer windowOpened;
         public YourOrder(int id)
         {
             tabelid = id;
@@ -42,5 +44,11 @@ namespace WpfApplication4
                 OrderList.Items.Add(item.BludoName);
             }
         }
+
+        private void Count_Click(object sender, RoutedEventArgs e)
+        {
+            Thanks th = new Thanks(tabelid);
+            th.Show();
+        }        
     }
 }

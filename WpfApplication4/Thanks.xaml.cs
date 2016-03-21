@@ -19,9 +19,15 @@ namespace WpfApplication4
     /// </summary>
     public partial class Thanks : Window
     {
-        public Thanks()
+        int tabelid;
+        Context context = new Context();        
+
+        public Thanks(int id)
         {
+            tabelid = id;
             InitializeComponent();
+            double sum = Requests.MethodsOrder.GetSumByTableID(context, tabelid);
+            Sum.Items.Add(sum);
         }
     }
 }

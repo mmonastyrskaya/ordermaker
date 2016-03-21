@@ -14,25 +14,28 @@ namespace WpfApplication4.Requests
     {
         public static void InsertBludoInOrder(Context context, Entities.BludoInOrder bludoIO)
         {
-            foreach (var b in context.Bludos.Where(b => b.BludoID == bludoIO.BludoID))
-            {
-                var bID = b.BludoID;
+            //foreach (var b in context.Bludos.Where(b => b.BludoID == bludoIO.BludoID))
+            //{
+            //    var bID = b.BludoID;
 
-                foreach (var o in context.OrdersInTime.Where(o => o.OrderID == bludoIO.OrderID))
-                {
-                    var oID = o.OrderID;
+            //    foreach (var o in context.OrdersInTime.Where(o => o.OrderID == bludoIO.OrderID))
+            //    {
+            //        var oID = o.OrderID;
 
-                    context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bludoIO.BludoAmount, BludoStatus = bludoIO.BludoStatus, OrderID = oID, OrderTime = DateTime.Now });
-                    context.SaveChanges();
-                }
-            }
+            //        context.BludosInOrder.Add(new Entities.BludoInOrder { BludoID = bID, BludoAmount = bludoIO.BludoAmount, BludoStatus = bludoIO.BludoStatus, OrderID = oID, OrderTime = DateTime.Now });
+            //        context.SaveChanges();
+            //    }
+            //}
+            context.BludosInOrder.Add(bludoIO);
             context.SaveChanges();
         }
 
-        public static void InsertOrderInTime(Context context, Entities.OrderInTime orderIT)
+        public static Entities.OrderInTime InsertOrderInTime(Context context, Entities.OrderInTime orderIT)
         {
-            context.OrdersInTime.Add(new Entities.OrderInTime { TableID = orderIT.TableID, WaiterID=orderIT.WaiterID });
+            Entities.OrderInTime order = new Entities.OrderInTime { TableID = orderIT.TableID, WaiterID = orderIT.WaiterID };
+            context.OrdersInTime.Add(order);
             context.SaveChanges();
+            return order;
         }
 
 

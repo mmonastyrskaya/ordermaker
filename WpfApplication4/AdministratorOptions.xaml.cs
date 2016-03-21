@@ -23,5 +23,26 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddingDish ad = new AddingDish();
+            ad.Show();
+            this.Close();
+        }
+
+        private void table_Click(object sender, RoutedEventArgs e)
+        {
+            AddingTable at = new AddingTable();
+            at.Show();
+            this.Close();
+        }
+
+        private void waiter_Click(object sender, RoutedEventArgs e)
+        {
+            AddingWaiter aw = new AddingWaiter();
+            aw.Show();
+            this.Close();
+        }
     }
 }

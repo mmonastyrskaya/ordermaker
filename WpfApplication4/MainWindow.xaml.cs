@@ -104,5 +104,12 @@ namespace WpfApplication4
             w.Show();
             this.Close();
         }
+
+        private void Admin_Click(object sender, RoutedEventArgs e)
+        {
+            AdministratorOptions ao = new AdministratorOptions();
+            ao.Show();
+            this.Close();
+        }
     }
 }

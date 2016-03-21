@@ -39,5 +39,20 @@ namespace WpfApplication4
             }
             else { MessageBox.Show("Стола с таким номером не существует."); }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Context context = new Context();
+            bool check = Requests.MethodsOrder.CheckLabel(context, int.Parse(LabelTable.Text));
+
+            if (check == true)
+            {
+                Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));
+                YourOrder yo = new YourOrder(t.TableID);
+                yo.Show();
+                this.Close();
+            }
+            else { MessageBox.Show("Стола с таким номером не существует."); }
+        }
     }
 }

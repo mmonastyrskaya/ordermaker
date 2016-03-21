@@ -19,10 +19,14 @@ namespace WpfApplication4
     /// </summary>
     public partial class MakingOrder : Window
     {
+        
         Context context = new Context();
         int waiterid;
         public MakingOrder(int id)
-        {            
+        {
+            //ClassCounter Counter = new ClassCounter();
+            //Handler Handler = new Handler();
+
             waiterid = id;
             InitializeComponent();
 
@@ -47,7 +51,7 @@ namespace WpfApplication4
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            ChooseB.SelectedItem = ChooseB.SelectedItem;
         }
 
         private void AddBIO_Click(object sender, RoutedEventArgs e)
@@ -56,8 +60,10 @@ namespace WpfApplication4
             order.WaiterID = waiterid;
             order.TableID = 1;
 
-            Requests.MethodsWaiter.InsertOrderInTime(context, order);
+            order = Requests.MethodsWaiter.InsertOrderInTime(context, order);
 
+            //Context contextnew = new Context();
+            
             Entities.BludoInOrder bio = new Entities.BludoInOrder();
             bio.BludoAmount = int.Parse(AmountB.Text);
             bio.BludoStatus = (Status.SelectedItem).ToString();

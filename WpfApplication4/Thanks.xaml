@@ -24,7 +24,7 @@
 
 
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto"  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Сумма заказа:" IsEnabled="False" Height="14" Margin="0,11,0,11" Width="90"/>
-        <ListBox HorizontalAlignment="Center" Height="26"  Grid.Row="3" Margin="0,20,0,0" VerticalAlignment="Top" Width="50"/>
+        <ListBox x:Name="Sum" HorizontalAlignment="Center" Height="26"  Grid.Row="3" Margin="0,20,0,0" VerticalAlignment="Top" Width="50"/>
         
         <!--короче, когда официант получает оплату, то выскакивает скрытый текст-->
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto" Grid.Row="3"   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Официант получил запрос на счет. Спасибо за заказ! Приходите еще!" Height="35" Margin="10,86,10,65" Width="274" TextAlignment="Center" IsEnabled="False" Visibility="Hidden"/>
