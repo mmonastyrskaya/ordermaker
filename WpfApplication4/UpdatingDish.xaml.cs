@@ -60,7 +60,7 @@ namespace WpfApplication4
             price.Text = "";
             category.SelectedItem = null;
             weight.Text = "";
-            time.Text = "";
+            
         }
     }
 }
