@@ -339,6 +339,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OrderModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="OrderModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>OrderModel.edmx</DependentUpon>
