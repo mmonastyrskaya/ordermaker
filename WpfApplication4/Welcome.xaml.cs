@@ -41,26 +41,31 @@ namespace WpfApplication4
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             Context context = new Context();
-            bool check = Requests.MethodsOrder.CheckLabel(context, int.Parse(LabelTable.Text));
-
-            if (check == true)
+            try
             {
-                try
+                bool check = Requests.MethodsOrder.CheckLabel(context, int.Parse(LabelTable.Text));
+                if (check == true)
                 {
-                    Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));
-                    YourOrder yo = new YourOrder(t.TableID);
-                    yo.Show();
-                    this.Close();
+                    try
+                    {
+                        Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));
+                        YourOrder yo = new YourOrder(t.TableID);
+                        yo.Show();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Проверьте правильность ввода номера.");
+                    }
+
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Проверьте правильность ввода номера.");
-                }
-                
+                else { MessageBox.Show("Стола с таким номером не существует."); }
             }
-            else { MessageBox.Show("Стола с таким номером не существует."); }
+            catch (Exception ex) { MessageBox.Show("Введите данные."); }
+
+           
         }
     }
 }

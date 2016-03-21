@@ -28,12 +28,20 @@ namespace WpfApplication4
         {
             Context context = new Context();
 
-            Entities.Bludo bludo= new Entities.Bludo();
-            bludo.BludoName = name.Text;
-            bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
-            bludo.BludoCategory = (category.SelectedItem).ToString();
-            bludo.BludoWeight = double.Parse(weight.Text);
-            bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
+            try
+            {
+                Entities.Bludo bludo = new Entities.Bludo();
+                bludo.BludoName = name.Text;
+                bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
+                bludo.BludoCategory = (category.SelectedItem).ToString();
+                bludo.BludoWeight = double.Parse(weight.Text);
+                bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Проверьте правильность ввода номера.");
+            }
+           
 
             Requests.MethodsAdmininstrator.InsertBludo(context,bludo);
 
