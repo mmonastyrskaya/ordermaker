@@ -22,13 +22,13 @@
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
-        <Button Content="Добавить в базу блюдо" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="80,44,80,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"   />
-        <Button x:Name="waiter" Content="Добавить в базу официанта" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="68,0,68,89" Background="{x:Null}" BorderBrush="{x:Null}" Click="waiter_Click"/>
-        <Button x:Name="table" Content="Добавить в базу столик" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,59,80,107" Background="{x:Null}" BorderBrush="{x:Null}" Click="table_Click"/>
+        <Button Content="Добавить в базу блюдо" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="80,34,80,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"   />
+        <Button x:Name="waiter" Content="Добавить в базу официанта" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="64,0,62,82" Background="{x:Null}" BorderBrush="{x:Null}" Click="waiter_Click" Width="168"/>
+        <Button x:Name="table" Content="Добавить в базу столик" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="80,59,73,102" Background="{x:Null}" BorderBrush="{x:Null}" Click="table_Click" Height="25" Width="141"/>
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Что вы хотите сделать?" IsEnabled="False" Height="14" Margin="0,11,0,11" Width="200" TextAlignment="Center"/>
-        <Button x:Name="dish" Content="Изменить блюдо в базе" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="75,95,73,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="dish_Click" Width="146"   />
-        <Button x:Name="table_Copy" Content="Изменить столик в блазе" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,110,73,56" Background="{x:Null}" BorderBrush="{x:Null}" Click="tablechange_Click" Width="146"/>
-        <Button x:Name="waiter_Copy" Content="Изменить официанта в базе" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="63,0,61,39" Background="{x:Null}" BorderBrush="{x:Null}" Click="waiterchange_Click" Width="170"/>
+        <Button x:Name="dish" Content="Изменить блюдо в базе" Grid.Row="3" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="75,104,73,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="dish_Click" Width="146"   />
+        <Button x:Name="table_Copy" Content="Изменить столик в базе" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,124,73,37" Background="{x:Null}" BorderBrush="{x:Null}" Click="tablechange_Click" Width="146" Height="25"/>
+        <Button x:Name="waiter_Copy" Content="Изменить официанта в базе" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="62,0,62,17" Background="{x:Null}" BorderBrush="{x:Null}" Click="waiterchange_Click" Width="170"/>
 
     </Grid>
 </Window>
