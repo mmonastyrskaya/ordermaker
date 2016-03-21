@@ -23,5 +23,25 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Context context = new Context();
+
+            Entities.Bludo bludo= new Entities.Bludo();
+            bludo.BludoName = name.Text;
+            bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
+            bludo.BludoCategory = (category.SelectedItem).ToString();
+            bludo.BludoWeight = double.Parse(weight.Text);
+
+            Requests.MethodsAdmininstrator.InsertBludo(context,bludo);
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            AdministratorOptions ao = new AdministratorOptions();
+            ao.Show();
+        }
     }
 }

@@ -44,23 +44,23 @@
             <Label Content="Категория" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Время приговления" Grid.Row="4" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
 
-            <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <ComboBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20" Text="TextBox" VerticalAlignment="Center" Width="100">
+            <TextBox Name="name"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
+            <TextBox Name="weight" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
+            <TextBox Name="price" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
+            <ComboBox Name="category" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20" Text="" VerticalAlignment="Center" Width="100">
                 <TextBlock>Напиток</TextBlock>
                 <TextBlock>Горячее блюдо</TextBlock>
                 <TextBlock>Основное блюдо</TextBlock>
                 <TextBlock>Салат</TextBlock>
                 <TextBlock>Завтрак</TextBlock>
-                </ComboBox>
-                <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <Button Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
+            </ComboBox>
+            <TextBox Name="time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
+            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="45,5,45,0" Click="Button_Click"/>
+            <Button Name ="Back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="55,5,55,6" Click="Back_Click"/>
         </Grid>
 
 
 
         <Label Content="Добавить блюдо в меню" Foreground="White"  FontFamily="./Roboto" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Grid.ColumnSpan="2" Margin="10,12"/>
-        </Grid>
+    </Grid>
 </Window>
