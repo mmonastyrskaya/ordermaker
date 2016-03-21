@@ -19,9 +19,46 @@ namespace WpfApplication4
     /// </summary>
     public partial class UpdatingWaiter : Window
     {
-        public UpdatingWaiter()
+        Context context = new Context();
+        string wsurname;
+        string wname;
+        Entities.Waiter w = new Entities.Waiter();
+        public UpdatingWaiter(string input)
         {
             InitializeComponent();
+            wname =(input.Split(' '))[0];
+            wsurname = (input.Split(' '))[1];
+
+            w = (from r in context.Waiters
+                where (r.WaiterName==wname) &&(r.WaiterSurname==wsurname) 
+                select r).First();
+
+            name.Text = w.WaiterName;
+            surname.Text = w.WaiterSurname;
+            login.Text = w.WaiterLogin;
+            pass.Text = w.WaiterPassword;
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            w.WaiterName = name.Text;
+            w.WaiterSurname = surname.Text;
+            w.WaiterLogin = login.Text;
+            w.WaiterPassword = pass.Text;
+
+            Requests.MethodsAdmininstrator.InsertWaiter(context, w);
+
+            name.Text = "";
+            surname.Text = "";
+            login.Text = "";
+            pass.Text = "";            
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            ListOfWaiters low = new ListOfWaiters();
+            low.Show();
+            this.Show();
         }
     }
 }

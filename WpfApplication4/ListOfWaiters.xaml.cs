@@ -19,9 +19,32 @@ namespace WpfApplication4
     /// </summary>
     public partial class ListOfWaiters : Window
     {
+        Context context = new Context();
+              
+
         public ListOfWaiters()
         {
             InitializeComponent();
+
+            List<Entities.Waiter> waiters = Requests.MethodsAdmininstrator.GetAllWaiters(context);
+            foreach (Entities.Waiter waiter in waiters)
+            {
+                waitersl.Items.Add(waiter.WaiterName+" "+waiter.WaiterSurname);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UpdatingWaiter uw = new UpdatingWaiter((waitersl.SelectedItem).ToString());
+            uw.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddingWaiter aw = new AddingWaiter();
+            aw.Show();
+            this.Close();
         }
     }
 }
