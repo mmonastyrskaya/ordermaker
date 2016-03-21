@@ -25,6 +25,7 @@ namespace WpfApplication4
         {
             tabelid = id;
             InitializeComponent();
+            this.IsEnabled = false;
 
             //List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
             //foreach (Entities.Bludo item in bluda)
@@ -49,6 +50,11 @@ namespace WpfApplication4
             th.Show();
             App.Current.Windows[0].Close();
             this.Close();
-        }        
+        }
+
+        public void EnableButton()
+        {
+            Count_Copy.IsEnabled = true;
+        }
     }
 }
