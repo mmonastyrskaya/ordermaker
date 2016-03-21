@@ -47,10 +47,18 @@ namespace WpfApplication4
 
             if (check == true)
             {
-                Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));
-                YourOrder yo = new YourOrder(t.TableID);
-                yo.Show();
-                this.Close();
+                try
+                {
+                    Entities.Table t = Requests.MethodsOrder.GetTableByLabel(context, int.Parse(LabelTable.Text));
+                    YourOrder yo = new YourOrder(t.TableID);
+                    yo.Show();
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Проверьте правильность ввода номера.");
+                }
+                
             }
             else { MessageBox.Show("Стола с таким номером не существует."); }
         }
