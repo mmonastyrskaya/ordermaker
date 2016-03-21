@@ -53,6 +53,7 @@
                 <TextBlock>Основное блюдо</TextBlock>
                 <TextBlock>Салат</TextBlock>
                 <TextBlock>Завтрак</TextBlock>
+                <TextBlock>Десерт</TextBlock>
             </ComboBox>
             <TextBox Name="time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
             <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="45,5,45,0" Click="Button_Click"/>

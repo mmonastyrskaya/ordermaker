@@ -22,8 +22,8 @@
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
-        <Button Content="Изменить параметры выбранного блюда" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"/>
-        <Button Content="Добавить в базу блюдо" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="{x:Null}" BorderBrush="{x:Null}"/>
+        <Button Name="change" Content="Изменить параметры выбранного блюда" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click"/>
+        <Button Content="Добавить в базу блюдо" Grid.Column="1" Grid.Row="3" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_1"/>
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Список блюд" IsEnabled="False" Height="14" Margin="0,11,0,11" Width="200" TextAlignment="Center"/>
         <ListBox x:Name="dishes" HorizontalAlignment="Left" Height="136" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="274" SelectionChanged="dishes_SelectionChanged"/>
 

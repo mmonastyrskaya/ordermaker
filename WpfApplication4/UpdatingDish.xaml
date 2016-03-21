@@ -42,7 +42,6 @@
             <Label Content="Вес" Grid.Row="1" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Цена" Grid.Row="2" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Категория" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            <Label Content="Время приговления" Grid.Row="4" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
 
             <TextBox Name="name"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
             <TextBox Name="weight" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
@@ -53,10 +52,10 @@
                 <TextBlock>Основное блюдо</TextBlock>
                 <TextBlock>Салат</TextBlock>
                 <TextBlock>Завтрак</TextBlock>
+                <TextBlock>Десерт</TextBlock>
             </ComboBox>
-            <TextBox Name="time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
             <Button Content="Изменить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="45,5,45,0" Click="Button_Click"/>
-            <Button Name ="Back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="55,5,55,6" Click="Back_Click"/>
+            <Button Name ="Back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="55,0,55,6" Click="Back_Click" Height="20" VerticalAlignment="Bottom"/>
         </Grid>
 
 

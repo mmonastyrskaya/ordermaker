@@ -23,7 +23,7 @@ namespace WpfApplication4
         Context context = new Context();
         public WaiterAuthentification()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
