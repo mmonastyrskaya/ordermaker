@@ -35,7 +35,7 @@ namespace WpfApplication4
             price.Text = (bludo.BludoPrice).ToString();
             foreach (var c in category.Items)
             { 
-                if (bludo.BludoCategory == c.ToString());
+                if (bludo.BludoCategory == c.ToString())
                 category.SelectedItem = c;
             }                
             weight.Text = (bludo.BludoWeight).ToString();
@@ -43,7 +43,9 @@ namespace WpfApplication4
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            
+            ListOfDishes lod = new ListOfDishes();
+            lod.Show();
+            this.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -60,7 +62,6 @@ namespace WpfApplication4
             price.Text = "";
             category.SelectedItem = null;
             weight.Text = "";
-            
         }
     }
 }

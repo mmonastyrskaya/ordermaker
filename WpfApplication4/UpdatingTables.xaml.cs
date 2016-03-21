@@ -19,19 +19,45 @@ namespace WpfApplication4
     /// </summary>
     public partial class UpdatingTables : Window
     {
-        public UpdatingTables()
+        int tablel;
+
+        Context context = new Context();
+        Entities.Table table = new Entities.Table();
+        public UpdatingTables(int label)
         {
             InitializeComponent();
+
+            tablel = label;
+            InitializeComponent();
+
+            table = Requests.MethodsOrder.GetTableByLabel(context, tablel);
+
+            id.Text = (table.TableID).ToString();
+            location.Text = (table.TableLocation).ToString();
+            places.Text = (table.TablePlaces).ToString();
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-
+            ListOfTables lot = new ListOfTables();
+            lot.Show();
+            this.Close();
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
+            Context context = new Context();
 
+            Entities.Table table = new Entities.Table();
+            table.TableLabel = int.Parse(id.Text);
+            table.TableLocation = location.Text;
+            table.TablePlaces = int.Parse(places.Text);
+
+            Requests.MethodsAdmininstrator.InsertTable(context, table);
+
+            id.Text = "";
+            location.Text = "";
+            places.Text = "";
         }
     }
 }
