@@ -47,7 +47,7 @@
             <Label Content="Блюдо" Grid.Row="1" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Количество" Grid.Row="2" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Статус" Grid.Row="3" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            <TextBox x:Name="AmountB" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
+            <TextBox x:Name="AmountB" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="99" Margin="23,4,25,7" />
 
             <Button x:Name="AddBIO" Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Click="AddBIO_Click"/>
             <Button Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>

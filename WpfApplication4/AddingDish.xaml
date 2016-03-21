@@ -18,7 +18,7 @@
         <Grid Grid.Row="0" Background="#FF01579B" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="1" Background="#0288d1" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="2" Background="#29b6f6" Grid.ColumnSpan="2"/>
-        <Grid Grid.Row="3" Background="#81d4fa" Grid.ColumnSpan="2"/>
+        <Grid Grid.Row="3" Background="#81d4fa"/>
         <Grid Grid.Row="4" Background="#29b6f6" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="5" Background="#FF01579B" Grid.ColumnSpan="2"/>
 
@@ -56,8 +56,8 @@
                 <TextBlock>Десерт</TextBlock>
             </ComboBox>
             <TextBox Name="time" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="100"/>
-            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="45,5,45,0" Click="Button_Click"/>
-            <Button Name ="Back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="55,5,55,6" Click="Back_Click"/>
+            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="45,5,39,0" Click="Button_Click" Width="63"/>
+            <Button Name ="Back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Margin="54,5,45,6" Click="Back_Click" Width="48"/>
         </Grid>
 
 
