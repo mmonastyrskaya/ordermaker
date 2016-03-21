@@ -74,6 +74,11 @@ namespace WpfApplication4
             bio.OrderTime = DateTime.Now;
 
             Requests.MethodsWaiter.InsertBludoInOrder(context, bio);
+
+            ChooseT.SelectedItem = null;
+            Status.SelectedItem = null;
+            AmountB.Text = ""; 
+
         }
     }
 }

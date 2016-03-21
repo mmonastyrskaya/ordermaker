@@ -173,6 +173,9 @@
     <Compile Include="UpdatingTables.xaml.cs">
       <DependentUpon>UpdatingTables.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UpdatingWaiter.xaml.cs">
+      <DependentUpon>UpdatingWaiter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Waiter.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
@@ -255,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UpdatingTables.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatingWaiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
