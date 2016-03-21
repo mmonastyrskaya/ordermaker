@@ -41,17 +41,21 @@ namespace WpfApplication4
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            w.WaiterName = name.Text;
-            w.WaiterSurname = surname.Text;
-            w.WaiterLogin = login.Text;
-            w.WaiterPassword = pass.Text;
+            try
+            {
+                w.WaiterName = name.Text;
+                w.WaiterSurname = surname.Text;
+                w.WaiterLogin = login.Text;
+                w.WaiterPassword = pass.Text;
 
-            Requests.MethodsAdmininstrator.InsertWaiter(context, w);
+                Requests.MethodsAdmininstrator.InsertWaiter(context, w);
 
-            name.Text = "";
-            surname.Text = "";
-            login.Text = "";
-            pass.Text = "";            
+                name.Text = "";
+                surname.Text = "";
+                login.Text = "";
+                pass.Text = "";
+            }
+            catch (Exception ex) { MessageBox.Show("Проверьте правильность ввода данных."); }
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

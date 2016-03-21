@@ -29,15 +29,20 @@ namespace WpfApplication4
             Context context = new Context();
 
             Entities.Table table = new Entities.Table();
-            table.TableLabel = int.Parse(id.Text);
-            table.TableLocation = location.Text;
-            table.TablePlaces = int.Parse(places.Text);
+            try
+            {
+                table.TableLabel = int.Parse(id.Text);
+                table.TableLocation = location.Text;
+                table.TablePlaces = int.Parse(places.Text);
 
-            Requests.MethodsAdmininstrator.InsertTable(context, table);
+                Requests.MethodsAdmininstrator.InsertTable(context, table);
 
-            id.Text = "";
-            location.Text = "";
-            places.Text = "";
+                id.Text = "";
+                location.Text = "";
+                places.Text = "";
+            }
+            catch (Exception ex){ MessageBox.Show("Проверьте правильность ввода данных."); }
+            
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

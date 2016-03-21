@@ -47,7 +47,7 @@ namespace WpfApplication4
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Проверьте правильность ввода номера.");
+                MessageBox.Show("Проверьте правильность ввода данных.");
             }
            
 

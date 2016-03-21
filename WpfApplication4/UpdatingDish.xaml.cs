@@ -50,18 +50,22 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bludo.BludoName = name.Text;
-            bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));            
-            bludo.BludoCategory = (category.SelectedItem).ToString();
-            bludo.BludoWeight = double.Parse(weight.Text);
-            bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");            
+            try
+            {
+                bludo.BludoName = name.Text;
+                bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
+                bludo.BludoCategory = (category.SelectedItem).ToString();
+                bludo.BludoWeight = double.Parse(weight.Text);
+                bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
 
-            Requests.MethodsAdmininstrator.InsertBludo(context, bludo);
+                Requests.MethodsAdmininstrator.InsertBludo(context, bludo);
 
-            name.Text = "";
-            price.Text = "";
-            category.SelectedItem = null;
-            weight.Text = "";
+                name.Text = "";
+                price.Text = "";
+                category.SelectedItem = null;
+                weight.Text = "";
+            }
+            catch (Exception ex) { MessageBox.Show("Проверьте правильность ввода данных."); }
         }
     }
 }
