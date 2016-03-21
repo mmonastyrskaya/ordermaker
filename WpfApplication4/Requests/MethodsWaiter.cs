@@ -26,6 +26,7 @@ namespace WpfApplication4.Requests
                     context.SaveChanges();
                 }
             }
+            context.SaveChanges();
         }
 
         public static void InsertOrderInTime(Context context, Entities.OrderInTime orderIT)

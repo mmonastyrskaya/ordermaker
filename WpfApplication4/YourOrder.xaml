@@ -25,8 +25,9 @@
 
         <TextBlock Foreground="White" TextWrapping="Wrap"  FontFamily="./Roboto"  Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Text="Ваш заказ:" IsEnabled="False" Height="14" Margin="0,11,0,11" Width="69"/>
 
-        <Button Content="Рассчитать" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="115" Background="{x:Null}" BorderBrush="{x:Null}" Margin="169,0,10,10"  Foreground="White"/>
-        <ListBox HorizontalAlignment="Left" Height="122" Margin="10,30,0,0" Grid.Row="3" VerticalAlignment="Top" Width="274"/>
+        <Button Name="Count" Content="Рассчитать" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="115" Background="{x:Null}" BorderBrush="{x:Null}" Margin="169,0,10,10"  Foreground="White"/>
+        <ListBox Name ="OrderList" HorizontalAlignment="Left" Height="122" Margin="10,30,0,0" Grid.Row="3" VerticalAlignment="Top" Width="274"/>
+        <Button x:Name="Count_Copy" Content="Обновить" HorizontalAlignment="Center" Grid.Row="3" FontFamily="./Roboto" VerticalAlignment="Bottom" Width="116" Background="{x:Null}" BorderBrush="{x:Null}" Margin="10,0,168,10"  Foreground="White" Click="Count_Copy_Click"/>
 
 
     </Grid>

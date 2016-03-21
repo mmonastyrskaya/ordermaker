@@ -29,9 +29,18 @@ namespace WpfApplication4
             List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
             foreach (Entities.Bludo item in bluda)
             {
-                ListBox.Items.Add(item); 
+                OrderList.Items.Add(item); 
             }
                 
+        }
+
+        private void Count_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
+            foreach (Entities.Bludo item in bluda)
+            {
+                OrderList.Items.Add(item.BludoName);
+            }
         }
     }
 }
