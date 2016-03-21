@@ -35,9 +35,14 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UpdatingWaiter uw = new UpdatingWaiter((waitersl.SelectedItem).ToString());
-            uw.Show();
-            this.Close();
+            if (waitersl.SelectedItem == null) { MessageBox.Show("Проверьте правильность ввода данных."); }
+            else
+            {
+                UpdatingWaiter uw = new UpdatingWaiter((waitersl.SelectedItem).ToString());
+                uw.Show();
+                this.Close();
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

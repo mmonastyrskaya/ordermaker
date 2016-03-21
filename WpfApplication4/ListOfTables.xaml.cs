@@ -33,9 +33,13 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UpdatingTables ut = new UpdatingTables(int.Parse((tabels.SelectedItem).ToString()));
-            ut.Show();
-            this.Close();
+            if (tabels.SelectedItem == null) { MessageBox.Show("Выберете стол."); }
+            else
+            {
+                UpdatingTables ut = new UpdatingTables(int.Parse((tabels.SelectedItem).ToString()));
+                ut.Show();
+                this.Close();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

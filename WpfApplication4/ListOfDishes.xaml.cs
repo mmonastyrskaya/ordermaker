@@ -38,9 +38,13 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UpdatingDish ud = new UpdatingDish((dishes.SelectedItem).ToString());
-            ud.Show();
-            this.Close();
+            if (dishes.SelectedItem == null) { MessageBox.Show("Выберете блюдо."); }
+            else
+            {
+                UpdatingDish ud = new UpdatingDish((dishes.SelectedItem).ToString());
+                ud.Show();
+                this.Close();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
