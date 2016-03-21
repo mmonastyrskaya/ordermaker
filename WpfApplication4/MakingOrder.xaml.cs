@@ -75,9 +75,11 @@ namespace WpfApplication4
 
             Requests.MethodsWaiter.InsertBludoInOrder(context, bio);
 
-            ChooseT.SelectedItem = null;
+            ChooseB.SelectedItem = null;
             Status.SelectedItem = null;
-            AmountB.Text = ""; 
+            AmountB.Text = "";
+
+            (App.Current.Windows[1]).IsEnabled=true;
 
         }
     }
