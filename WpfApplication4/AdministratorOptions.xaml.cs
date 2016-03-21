@@ -44,5 +44,26 @@ namespace WpfApplication4
             aw.Show();
             this.Close();
         }
+
+        private void dish_Click(object sender, RoutedEventArgs e)
+        {
+            ListOfDishes lod = new ListOfDishes();
+            lod.Show();
+            this.Close();
+        }
+
+        private void tablechange_Click(object sender, RoutedEventArgs e)
+        {
+            ListOfTables lot = new ListOfTables();
+            lot.Show();
+            this.Close();
+        }
+
+        private void waiterchange_Click(object sender, RoutedEventArgs e)
+        {
+            ListOfWaiters low = new ListOfWaiters();
+            low.Show();
+            this.Close();
+        }
     }
 }

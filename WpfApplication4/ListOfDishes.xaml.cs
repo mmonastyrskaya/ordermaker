@@ -19,9 +19,26 @@ namespace WpfApplication4
     /// </summary>
     public partial class ListOfDishes : Window
     {
+        Context context = new Context();
         public ListOfDishes()
         {
             InitializeComponent();
+
+            List<Entities.Bludo> bludos = Requests.MethodsAdmininstrator.GetAllBludos(context);
+            foreach (Entities.Bludo bludo in bludos)
+            {
+                dishes.Items.Add(bludo.BludoName);
+            }
+        }
+
+        private void dishes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

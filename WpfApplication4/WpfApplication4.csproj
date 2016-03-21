@@ -167,6 +167,18 @@
     <Compile Include="Thanks.xaml.cs">
       <DependentUpon>Thanks.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UpdatingDish.xaml.cs">
+      <DependentUpon>UpdatingDish.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdatingTable.xaml.cs">
+      <DependentUpon>UpdatingTable.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdatingWaiter.xaml.cs">
+      <DependentUpon>UpdatingWaiter.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Waiter.cs">
       <DependentUpon>OrderModel.tt</DependentUpon>
     </Compile>
@@ -241,6 +253,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Thanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatingDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatingTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdatingWaiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
