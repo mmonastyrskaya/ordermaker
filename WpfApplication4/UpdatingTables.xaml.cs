@@ -23,5 +23,15 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

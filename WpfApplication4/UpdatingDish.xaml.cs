@@ -19,9 +19,48 @@ namespace WpfApplication4
     /// </summary>
     public partial class UpdatingDish : Window
     {
-        public UpdatingDish()
-        {
+        string bludon;
+
+        Context context = new Context();
+        Entities.Bludo bludo = new Entities.Bludo();
+
+        public UpdatingDish(string bludoname)
+        {            
+            bludon = bludoname;
             InitializeComponent();
+
+            bludo = Requests.MethodsOrder.GetBludoByName(context, bludon);
+
+            name.Text = bludo.BludoName;
+            price.Text = (bludo.BludoPrice).ToString();
+            foreach (var c in category.Items)
+            { 
+                if (bludo.BludoCategory == c.ToString());
+                category.SelectedItem = c;
+            }                
+            weight.Text = (bludo.BludoWeight).ToString();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bludo.BludoName = name.Text;
+            bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));            
+            bludo.BludoCategory = (category.SelectedItem).ToString();
+            bludo.BludoWeight = double.Parse(weight.Text);
+            bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");            
+
+            Requests.MethodsAdmininstrator.InsertBludo(context, bludo);
+
+            name.Text = "";
+            price.Text = "";
+            category.SelectedItem = null;
+            weight.Text = "";
+            
         }
     }
 }

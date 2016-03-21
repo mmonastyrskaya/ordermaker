@@ -21,18 +21,16 @@ namespace WpfApplication4
     {
         int tabelid;
         Context context = new Context();
-        public delegate void MethodContainer();
-        public event MethodContainer windowOpened;
         public YourOrder(int id)
         {
             tabelid = id;
             InitializeComponent();
 
-            List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
-            foreach (Entities.Bludo item in bluda)
-            {
-                OrderList.Items.Add(item); 
-            }
+            //List<Entities.Bludo> bluda = Requests.MethodsOrder.GetBludosTableID(context, tabelid);
+            //foreach (Entities.Bludo item in bluda)
+            //{
+            //    OrderList.Items.Add(item); 
+            //}
                 
         }
 

@@ -38,7 +38,16 @@ namespace WpfApplication4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            UpdatingDish ud = new UpdatingDish((dishes.SelectedItem).ToString());
+            ud.Show();
+            this.Close();
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddingDish ad = new AddingDish();
+            ad.Show();
+            this.Close();
         }
     }
 }
