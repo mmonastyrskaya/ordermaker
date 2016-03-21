@@ -36,6 +36,14 @@ namespace WpfApplication4
                 bludo.BludoCategory = (category.SelectedItem).ToString();
                 bludo.BludoWeight = double.Parse(weight.Text);
                 bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
+
+                Requests.MethodsAdmininstrator.InsertBludo(context, bludo);
+
+                name.Text = "";
+                price.Text = "";
+                category.SelectedItem = null;
+                weight.Text = "";
+                time.Text = "";
             }
             catch (Exception ex)
             {
@@ -43,13 +51,7 @@ namespace WpfApplication4
             }
            
 
-            Requests.MethodsAdmininstrator.InsertBludo(context,bludo);
-
-            name.Text = "";
-            price.Text = "";
-            category.SelectedItem = null;
-            weight.Text = "";
-            time.Text = "";
+            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
