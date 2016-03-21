@@ -33,15 +33,22 @@ namespace WpfApplication4
             bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
             bludo.BludoCategory = (category.SelectedItem).ToString();
             bludo.BludoWeight = double.Parse(weight.Text);
+            bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
 
             Requests.MethodsAdmininstrator.InsertBludo(context,bludo);
+
+            name.Text = "";
+            price.Text = "";
+            category.SelectedItem = null;
+            weight.Text = "";
+            time.Text = "";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+        {            
             AdministratorOptions ao = new AdministratorOptions();
             ao.Show();
+            this.Close();
         }
     }
 }

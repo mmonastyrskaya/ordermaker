@@ -40,12 +40,12 @@
             <Label Content="Расположение" Grid.Row="1" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             <Label Content="Количество мест" Grid.Row="2" Foreground="White" FontFamily="./Roboto"  FontSize="11" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
             
-            <TextBox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
-            <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="100"/>
+            <TextBox x:Name="id" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
+            <TextBox x:Name="location" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
+            <TextBox x:Name="places" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" FontFamily="./Roboto" Height="20"  TextWrapping="Wrap" VerticalAlignment="Center" Width="100"/>
             
-            <Button Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <Button Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button x:Name="add" Content="Добавить" Grid.Column="1" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Click="add_Click"/>
+            <Button x:Name="back" Content="Назад" Grid.Column="0" Grid.Row="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  Background="{x:Null}" BorderBrush="{x:Null}" Click="back_Click"/>
         </Grid>
 
 

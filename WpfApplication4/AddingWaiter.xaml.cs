@@ -23,5 +23,31 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Context context = new Context();
+
+            Entities.Waiter w = new Entities.Waiter();
+            w.WaiterName = name.Text;
+            w.WaiterSurname = surname.Text;
+            w.WaiterLogin = login.Text;
+            w.WaiterPassword = pass.Text;
+
+            Requests.MethodsAdmininstrator.InsertWaiter(context, w);
+
+            name.Text = "";
+            surname.Text = "";
+            login.Text = "";
+            pass.Text = "";
+
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            AdministratorOptions ao = new AdministratorOptions();
+            ao.Show();
+            this.Close();
+        }
     }
 }

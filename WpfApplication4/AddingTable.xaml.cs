@@ -23,5 +23,28 @@ namespace WpfApplication4
         {
             InitializeComponent();
         }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Context context = new Context();
+
+            Entities.Table table = new Entities.Table();
+            table.TableLabel = int.Parse(id.Text);
+            table.TableLocation = location.Text;
+            table.TablePlaces = int.Parse(places.Text);
+
+            Requests.MethodsAdmininstrator.InsertTable(context, table);
+
+            id.Text = "";
+            location.Text = "";
+            places.Text = "";
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            AdministratorOptions ao = new AdministratorOptions();
+            ao.Show();
+            this.Close();
+        }
     }
 }
