@@ -17,9 +17,9 @@ namespace WpfApplication4
     /// <summary>
     /// Логика взаимодействия для AddingDish.xaml
     /// </summary>
-    public partial class AddingDish : Window
+    public partial class UpdatingDish : Window
     {
-        public AddingDish()
+        public UpdatingDish()
         {
             InitializeComponent();
         }

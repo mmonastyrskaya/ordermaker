@@ -22,10 +22,10 @@ namespace WpfApplication4
         
         Context context = new Context();
         int waiterid;
+
         public MakingOrder(int id)
         {
-            //ClassCounter Counter = new ClassCounter();
-            //Handler Handler = new Handler();
+            
 
             waiterid = id;
             InitializeComponent();

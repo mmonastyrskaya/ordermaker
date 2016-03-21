@@ -49,6 +49,8 @@ namespace WpfApplication4
         {
             Thanks th = new Thanks(tabelid);
             th.Show();
+            App.Current.Windows[0].Close();
+            this.Close();
         }        
     }
 }
