@@ -19,6 +19,7 @@ namespace WpfApplication4
     /// </summary>
     public partial class WaiterAuthentification : Window
     {
+        
         Context context = new Context();
         public WaiterAuthentification()
         {

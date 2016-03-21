@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApplication4
 {
     /// <summary>
-    /// Логика взаимодействия для UpdatingWaiter.xaml
+    /// Логика взаимодействия для UpdatingTables.xaml
     /// </summary>
-    public partial class UpdatingWaiter : Window
+    public partial class UpdatingTables : Window
     {
-        public UpdatingWaiter()
+        public UpdatingTables()
         {
             InitializeComponent();
         }

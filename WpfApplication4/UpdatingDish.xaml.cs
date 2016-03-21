@@ -15,40 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApplication4
 {
     /// <summary>
-    /// Логика взаимодействия для AddingDish.xaml
+    /// Логика взаимодействия для UpdatingDish.xaml
     /// </summary>
-    public partial class AddingDish : Window
+    public partial class UpdatingDish : Window
     {
-        public AddingDish()
+        public UpdatingDish()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Context context = new Context();
-
-            Entities.Bludo bludo= new Entities.Bludo();
-            bludo.BludoName = name.Text;
-            bludo.BludoPrice = System.Convert.ToDecimal(double.Parse(price.Text));
-            bludo.BludoCategory = (category.SelectedItem).ToString();
-            bludo.BludoWeight = double.Parse(weight.Text);
-            bludo.BludoTime = DateTime.Parse("2000-12-12 10:00");
-
-            Requests.MethodsAdmininstrator.InsertBludo(context,bludo);
-
-            name.Text = "";
-            price.Text = "";
-            category.SelectedItem = null;
-            weight.Text = "";
-            time.Text = "";
-        }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {            
-            AdministratorOptions ao = new AdministratorOptions();
-            ao.Show();
-            this.Close();
         }
     }
 }
